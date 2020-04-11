@@ -8,15 +8,6 @@ Jason testing11
 
 ## Component Heirarchy 
 
-# MVP
-jason mvp
-# Component Heirarchy 
- janicebranch
- janicebranch
-
- master
-
-
 ### Wireframes/UI 
 janice blah blah blah blah 
 
