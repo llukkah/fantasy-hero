@@ -7,14 +7,6 @@ description /crud goes here
 
 ## Component Heirarchy 
 
-# MVP
-
-# Component Heirarchy 
- janicebranch
- janicebranch
-
- master
-
 
 ### Wireframes/UI 
 janice blah blah blah blah 
