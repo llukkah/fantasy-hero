@@ -1,12 +1,11 @@
 # fantasy-hero
 
 
-jackson
-# MVP
 
-# Component Heirarchy 
-=======
- janicebranch
+## MVP
+
+## Component Heirarchy 
+
 
 ### Wireframes/UI 
 
