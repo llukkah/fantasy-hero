@@ -1,15 +1,15 @@
 # fantasy-hero
+description /crud goes here
 
 
-jackson
 # MVP
 
 # Component Heirarchy 
  janicebranch
+ janicebranch
+
+ master
 
 ### Wireframes/UI 
 janice blah blah blah blah 
 
-Jason testing
- master
-master
