@@ -37,25 +37,32 @@ MVP consists of creating a working product that allows users to create their own
 React:
 src
 |__ assets/
-      |__ Shared/
-        |__ Layout.jsx
-        |__ Sort.js
-      |__ components/
-        |__ App.jsx
-        |__ Header.jsx
-        |__ Landing.jsx
-          |__RandomizeText.jsx
-        |__ReadHeroProfiles.jsx     
-          |__CreateHeroProfile.jsx
-        |__ReadSingleHero.jsx
-        |__UpdateHeroProfile.jsx
-          |__DeleteHeroProfile
-        |__ Footer.jsx
+  |__ wireframes
+|__ Shared/
+  |__ Layout.jsx
+  |__ Sort.js
+|__ components/
+  |__ App.jsx
+  |__ Header.jsx
+  |__ Landing.jsx
+    |__RandomizeText.jsx
+  |__ReadHeroProfiles.jsx     
+    |__CreateHeroProfile.jsx
+  |__ReadSingleHero.jsx
+    |__UpdateHeroProfile.jsx
+    |__DeleteHeroProfile.js
+  |__ Footer.jsx
 ```
 
-### Wireframes/UI 
+### Wireframes/UI/System Design
 Wireframe from Figma:
 ![UI](./wireframes/fantasy-hero.png)
+```
+
+```
+Primary/Secondary Fonts Choice: Google Fonts (Montserrat/Open Sans)
+Colors:
+
 ```
 System Overview/Stack:
 MongoDB
@@ -64,6 +71,17 @@ React
 Node.js
 ```
 
-```javascript
-
+```
+MongoDB Setup: 
+|__ Models
+  |__ Class.js
+    |__Class: [(skills)]
+  |__ Hero.js
+    |__name: string
+    |__class: [objectID]
+    |__race: string
+    |__hp: number
+    |__atk: number
+    |__weapon: string
+    |__img: string ???? this is a maybe
 ```
