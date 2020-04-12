@@ -32,6 +32,15 @@ MVP consists of creating a working product that allows users to create their own
 -  *Git commits are to be made regularly by team members on their respective branchs and must be approved before merging.*
 
 
+### POST MVP
+ - Search Functionality
+ - Images
+ - Transformation into game
+ -  - Turn based battle game based on randomized HP & Attack values
+ 
+
+
+
 ### Wireframes/UI/System Design
 #### Wireframe by Figma:
 ![UI](./wireframes/fantasy-hero.png)
