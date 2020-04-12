@@ -35,11 +35,8 @@ MVP consists of creating a working product that allows users to create their own
 ### POST MVP
  - Search Functionality
  - Images
- - Transformation into game
- -  - Turn based battle game based on randomized HP & Attack values
+ - Transformation into turn based battle game based on randomized HP & Attack values
  
-
-
 
 ### Wireframes/UI/System Design
 #### Wireframe by Figma:
