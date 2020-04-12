@@ -24,6 +24,7 @@ MVP consists of creating a working product that allows users to create their own
 
 ### Tools
 - CSS Flexbox/Grid
+- Google Fonts
 - MERN stack (MongoDB, Express, React, Node)
 - React Routes
 - React Components
