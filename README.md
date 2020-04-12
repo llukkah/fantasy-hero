@@ -11,7 +11,6 @@ Try it out for yourself or check out our heroes that we have made in the past!
 
 ## Component Heirarchy 
 
-
 ### Wireframes/UI 
 janice blah blah blah blah 
 
