@@ -34,3 +34,14 @@ src
 ### Wireframes/UI 
 Wireframe from Figma:
 ![UI](./wireframes/fantasy-hero.png)
+```
+System Overview/Stack:
+MongoDB
+Express
+React
+Node.js
+```
+
+```javascript
+
+```
