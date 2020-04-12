@@ -11,6 +11,26 @@ Try it out for yourself or check out our heroes that we have made in the past!
 
 ## Component Heirarchy 
 
-### Wireframes/UI 
-janice blah blah blah blah 
+```
+React:
+src
+|__ assets/
+      |__ Shared/
+        |__ Layout.jsx
+        |__ Sort.js
+      |__ components/
+        |__ App.jsx
+        |__ Header.jsx
+        |__ Landing.jsx
+          |__RandomizeText.jsx
+        |__ReadHeroProfiles.jsx     
+          |__CreateHeroProfile.jsx
+        |__ReadSingleHero.jsx
+        |__UpdateHeroProfile.jsx
+          |__DeleteHeroProfile
+        |__ Footer.jsx
+```
 
+### Wireframes/UI 
+Wireframe from Figma:
+![UI](./wireframes/fantasy-hero.png)
