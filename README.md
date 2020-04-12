@@ -76,7 +76,7 @@ src
     |__CreateHeroProfile.jsx
   |__ReadSingleHero.jsx
     |__UpdateHeroProfile.jsx
-    |__DeleteHeroProfile.js
+    --deleted
   |__ Footer.jsx
 ```
 #### MongoDB Heirarchy 
