@@ -33,7 +33,7 @@ MVP consists of creating a working product that allows users to create their own
 
 
 ### Wireframes/UI/System Design
-#### Wireframe by Figma:
+#### Wireframes by Figma:
 ![UI](./wireframes/fantasy-hero.png)
 
 #### UI
@@ -79,13 +79,19 @@ src
 MongoDB Setup: 
 |__ Models
   |__ Class.js
-    |__Class: [(skills)]
+    |__class: string
+        [(
+          skill a
+          skill b
+          skill c
+          ultimate
+        )]
   |__ Hero.js
     |__name: string
     |__class: [objectID]
     |__race: string
-    |__hp: number
-    |__atk: number
+    |__hp: int
+    |__atk: int
     |__weapon: string
-    |__img: string ???? this is a maybe
+    |__img: string 
 ```
