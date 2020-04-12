@@ -33,14 +33,17 @@ MVP consists of creating a working product that allows users to create their own
 
 
 ### Wireframes/UI/System Design
-Wireframe from Figma:
+#### Wireframe by Figma:
 ![UI](./wireframes/fantasy-hero.png)
-```
+
+#### UI
 
 ```
 Primary/Secondary Fonts Choice: Google Fonts (Montserrat/Open Sans)
 Colors:
 
+```
+#### Stack
 ```
 System Overview/Stack:
 MongoDB
