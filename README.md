@@ -50,7 +50,7 @@ Primary/Secondary Fonts Choice: Google Fonts (Montserrat/Open Sans)
 Colors:
 ![Palette](./wireframes/color.png)
 
-```
+
 #### Stack
 ```
 System Overview/Stack:
