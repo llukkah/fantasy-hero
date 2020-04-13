@@ -44,9 +44,10 @@ MVP consists of creating a working product that allows users to create their own
 
 #### UI
 
-```
+
 Primary/Secondary Fonts Choice: Google Fonts (Montserrat/Open Sans)
 Colors:
+![Palette](./wireframes/color.png)
 
 ```
 #### Stack
