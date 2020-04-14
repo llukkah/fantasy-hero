@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const User = require('../models/user')
 const Hero = require('../models/hero')
+const Specialty = require('../models/specialty')
 const db = require('../db')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
@@ -70,10 +71,37 @@ const verifyUser = (req, res) => {
 
 const changePassword = async (req, res) => { }
 
+
+const getSpecialty = async (req, res) => {
+  try {
+
+    res.status(404).json({ message: 'Product not found!' })
+} catch (error) {
+    res.status(500).json({ error: error.message })
+}
+}
+
 const getHeroes = async (req, res) => {
     try {
-        const heros = await Hero.find()
-        res.json(heros)
+      const heros = await Hero.find()
+      const id = heros.map(hero => hero.specialty)
+      // console.log(id)
+      let result = []
+      let name = []
+      for (let i = 0; i < id.length; i++){
+        result.push(await Specialty.findById(id[i]))
+      }
+      for (let i = 0; i < result.length; i++){
+        name.push(result[i].name)
+      }
+      // console.log(name)
+      // console.log( await result)
+      if (name) {
+        return res.json({
+          hero: heros,
+          names: name
+        })
+      }
     } catch (error) {
         res.status(500).json({ error: error.message })
     }
@@ -134,6 +162,7 @@ module.exports = {
     signIn,
     verifyUser,
     changePassword,
+    getSpecialty,
     createHero,
     getHeroes,
     getHero,
