@@ -11,6 +11,7 @@ class Heroes extends Component {
     super()
     this.state = {
       heroes: [],
+      specialtys: [],
       filterValue: '',
       filteredProducts: null,
       selectValue: 'Featured'
@@ -18,8 +19,12 @@ class Heroes extends Component {
   }
 
   async componentDidMount() {
-    const heroes = await getHeroes()
-    this.setState({ heroes })
+    const heros = await getHeroes()
+    console.log(heros)
+    this.setState({
+      heroes: heros.hero,
+      specialtys: heros.names
+    })
   }
 
   handleSearchChange = event => {
@@ -65,9 +70,13 @@ class Heroes extends Component {
   handleSubmit = event => event.preventDefault()
 
   render() {
-    console.log(this.state.heroes)
-    console.log(this.state.heroes.specialty)
     const heroes = this.state.filteredProducts ? this.state.filteredProducts : this.state.heroes
+    
+    console.log(this.state.heroes, this.state.specialtys)
+    if (heroes.length > 1) {
+      console.log(heroes[0].specialty)
+    }
+
     const HEROES = heroes.map((hero, index) =>
       <Hero _id={hero._id} name={hero.name} imgURL={hero.img} race={hero.race} weapon={hero.weapon} key={index} />
     )
