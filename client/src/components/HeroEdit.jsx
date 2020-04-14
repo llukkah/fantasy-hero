@@ -2,35 +2,38 @@ import React, { Component } from 'react'
 import './ProductEdit.css'
 import { Redirect } from 'react-router-dom'
 import Layout from './shared/Layout'
-import { getProduct, updateProduct } from '../services/product'
+import { getHero, updateHero } from '../services/hero'
 
-class ProductEdit extends Component {
+class HeroEdit extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            product: {
-                name: '',
-                description: '',
-                imgURL: '',
-                price: ''
-            },
+          Hero: {
+            name: '',
+            specialty: {}, //Come back to this
+            race: '',
+            hp: 100,
+            atk: 50,
+            weapon: '',
+            img: '',
+        },
             updated: false
         }
     }
 
     async componentDidMount() {
         let { id } = this.props.match.params
-        const product = await getProduct(id)
-        this.setState({ product })
+        const hero = await getHero(id)
+        this.setState({ hero })
     }
 
 
     handleChange = (event) => {
         const { name, value } = event.target
         this.setState({
-            product: {
-                ...this.state.product,
-                [name]: value
+            hero: {
+                ...this.state.hero,
+                [name]: value //come back to this
             }
         })
     }
@@ -38,28 +41,28 @@ class ProductEdit extends Component {
     handleSubmit = async (event) => {
         event.preventDefault()
         let { id } = this.props.match.params
-        const updated = await updateProduct(id, this.state.product)
+        const updated = await updateHero(id, this.state.hero)
         this.setState({ updated })
     }
 
     render() {
 
-        const { product, updated } = this.state
+        const { hero, updated } = this.state
 
         if (updated) {
-            return <Redirect to={`/products/${this.props.match.params.id}`} />
+            return <Redirect to={`/heroes/${this.props.match.params.id}`} />
         }
 
         return (
             <Layout user={this.props.user}>
                 <div className="product-edit">
                     <div className="image-container">
-                        <img className="edit-product-image" src={product.imgURL} alt={product.name} />
+                        <img className="edit-product-image" src={hero.img} alt={hero.name} />
                         <form onSubmit={this.handleSubmit}>
                             <input
                                 className="edit-input-image-link"
                                 placeholder='Image Link'
-                                value={product.imgURL}
+                                value={hero.img}
                                 name='imgURL'
                                 required
                                 onChange={this.handleChange}
@@ -70,7 +73,7 @@ class ProductEdit extends Component {
                         <input
                             className="input-name"
                             placeholder='Name'
-                            value={product.name}
+                            value={hero.name}
                             name='name'
                             required
                             autoFocus
@@ -79,18 +82,24 @@ class ProductEdit extends Component {
                         <input
                             className="input-price"
                             placeholder='Price'
-                            value={product.price}
+                            value={hero.specialty} // come back to this
                             name='price'
                             required
                             onChange={this.handleChange}
                         />
-                        <textarea
-                            className="textarea-description"
-                            rows={10}
-                            cols={78}
-                            placeholder='Description'
-                            value={product.description}
-                            name='description'
+                        <input
+                            className="input-price"
+                            placeholder='Price'
+                            value={hero.race} // come back to this
+                            name='price'
+                            required
+                            onChange={this.handleChange}
+                        />
+                        <input
+                            className="input-price"
+                            placeholder='Price'
+                            value={hero.weapon} // come back to this
+                            name='price'
                             required
                             onChange={this.handleChange}
                         />
@@ -102,4 +111,4 @@ class ProductEdit extends Component {
     }
 }
 
-export default ProductEdit
+export default HeroEdit

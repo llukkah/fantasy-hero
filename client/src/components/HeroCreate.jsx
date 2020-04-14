@@ -2,17 +2,20 @@ import React, { Component } from 'react'
 import './ProductCreate.css'
 import Layout from './shared/Layout'
 import { Redirect } from 'react-router-dom'
-import { createProduct } from '../services/product'
+import { createHero } from '../services/hero'
 
-class ProductCreate extends Component {
+class HeroCreate extends Component {
     constructor() {
         super()
         this.state = {
-            product: {
+            Hero: {
                 name: '',
-                description: '',
-                imgURL: '',
-                price: ''
+                specialty: {}, //Come back to this
+                race: '',
+                hp: 100,
+                atk: 50,
+                weapon: '',
+                img: '',
             },
             created: false
         }
@@ -21,24 +24,25 @@ class ProductCreate extends Component {
     handleChange = (event) => {
         const { name, value } = event.target
         this.setState({
-            product: {
-                ...this.state.product,
+            hero: {
+                ...this.state.hero,
                 [name]: value
+                // come back to this
             }
         })
     }
 
     handleSubmit = async (event) => {
         event.preventDefault()
-        const created = await createProduct(this.state.product)
+        const created = await createHero(this.state.hero)
         this.setState({ created })
     }
 
     render() {
-        const { product, created } = this.state
+        const { hero, created } = this.state
 
         if (created) {
-            return <Redirect to={`/products`} />
+            return <Redirect to={`/heroes`} />
         }
         return (
             <Layout user={this.props.user}>
@@ -46,7 +50,7 @@ class ProductCreate extends Component {
                     <input
                         className="input-name"
                         placeholder='Name'
-                        value={product.name}
+                        value={hero.name}
                         name='name'
                         required
                         autoFocus
@@ -55,7 +59,7 @@ class ProductCreate extends Component {
                     <input
                         className="input-price"
                         placeholder='Price'
-                        value={product.price}
+                        value={hero.specialty} // change this to a dropdown
                         name='price'
                         required
                         onChange={this.handleChange}
@@ -64,7 +68,7 @@ class ProductCreate extends Component {
                         className="textarea-description"
                         rows={10}
                         placeholder='Description'
-                        value={product.description}
+                        value={hero.race}
                         name='description'
                         required
                         onChange={this.handleChange}
@@ -72,7 +76,15 @@ class ProductCreate extends Component {
                     <input
                         className="input-image-link"
                         placeholder='Image Link'
-                        value={product.imgURL}
+                        value={hero.weapon}
+                        name='imgURL'
+                        required
+                        onChange={this.handleChange}
+                    />
+                    <input
+                        className="input-image-link"
+                        placeholder='Image Link'
+                        value={hero.img}
                         name='imgURL'
                         required
                         onChange={this.handleChange}
@@ -84,4 +96,4 @@ class ProductCreate extends Component {
     }
 }
 
-export default ProductCreate
+export default HeroCreate

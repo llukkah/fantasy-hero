@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const User = require('../models/user')
-const Product = require('../models/product')
+const Hero = require('../models/hero')
 const db = require('../db')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
@@ -70,21 +70,21 @@ const verifyUser = (req, res) => {
 
 const changePassword = async (req, res) => { }
 
-const getProducts = async (req, res) => {
+const getHeroes = async (req, res) => {
     try {
-        const products = await Product.find()
-        res.json(products)
+        const heros = await Hero.find()
+        res.json(heros)
     } catch (error) {
         res.status(500).json({ error: error.message })
     }
 }
 
-const getProduct = async (req, res) => {
+const getHero = async (req, res) => {
     try {
         const { id } = req.params
-        const product = await Product.findById(id)
-        if (product) {
-            return res.json(product)
+        const hero = await Hero.findById(id)
+        if (hero) {
+            return res.json(hero)
         }
         res.status(404).json({ message: 'Product not found!' })
     } catch (error) {
@@ -92,38 +92,38 @@ const getProduct = async (req, res) => {
     }
 }
 
-const createProduct = async (req, res) => {
+const createHero = async (req, res) => {
     try {
-        const product = await new Product(req.body)
-        await product.save()
-        res.status(201).json(product)
+        const hero = await new Hero(req.body)
+        await hero.save()
+        res.status(201).json(hero)
     } catch (error) {
         console.log(error)
         res.status(500).json({ error: error.message })
     }
 }
 
-const updateProduct = async (req, res) => {
+const updateHero = async (req, res) => {
     const { id } = req.params
-    await Product.findByIdAndUpdate(id, req.body, { new: true }, (error, product) => {
+    await Hero.findByIdAndUpdate(id, req.body, { new: true }, (error, hero) => {
         if (error) {
             return res.status(500).json({ error: error.message })
         }
-        if (!product) {
-            return res.status(404).json({ message: 'Product not found!' })
+        if (!hero) {
+            return res.status(404).json({ message: 'Hero not found!' })
         }
-        res.status(200).json(product)
+        res.status(200).json(hero)
     })
 }
 
-const deleteProduct = async (req, res) => {
+const deleteHero = async (req, res) => {
     try {
         const { id } = req.params;
-        const deleted = await Product.findByIdAndDelete(id)
+        const deleted = await Hero.findByIdAndDelete(id)
         if (deleted) {
-            return res.status(200).send("Product deleted")
+            return res.status(200).send("Hero deleted")
         }
-        throw new Error("Product not found")
+        throw new Error("Hero not found")
     } catch (error) {
         res.status(500).json({ error: error.message })
     }
@@ -134,9 +134,9 @@ module.exports = {
     signIn,
     verifyUser,
     changePassword,
-    createProduct,
-    getProducts,
-    getProduct,
-    updateProduct,
-    deleteProduct
+    createHero,
+    getHeroes,
+    getHero,
+    updateHero,
+    deleteHero
 }
