@@ -66,7 +66,12 @@ Node.js
   |__ wireframes
   |__ login-images
 ```
-
+```
+|__ assets
+  |__ styles
+    |__ css
+  |__ tests(not mvp)
+```
 
 #### React/Express 
 
