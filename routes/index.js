@@ -11,10 +11,10 @@ router.post('/sign-in', controllers.signIn)
 router.get('/verify', controllers.verifyUser)
 router.post('/change-password', controllers.changePassword)
 
-router.get('/products', controllers.getProducts)
-router.get('/products/:id', controllers.getProduct)
-router.post('/products', restrict, controllers.createProduct)
-router.put('/products/:id', restrict, controllers.updateProduct)
-router.delete('/products/:id', restrict, controllers.deleteProduct)
+router.get('/heroes', controllers.getHeroes)
+router.get('/heroes/:id', controllers.getHero)
+router.post('/heroes', restrict, controllers.createHero)
+router.put('/heroes/:id', restrict, controllers.updateHero)
+router.delete('/heroes/:id', restrict, controllers.deleteHero)
 
 module.exports = router
