@@ -38,7 +38,7 @@ MVP consists of creating a working product that allows users to create their own
  - Transformation into turn based battle game based on randomized HP & Attack values
  
 
-### Wireframes/UI/System Design
+### Wireframes/UI/System Architecture Design(In Progress)
 #### Wireframes by Figma:
 ![UI](./wireframes/fantasy-hero.png)
 [**Click here for Figma's verison of the wireframe**](https://www.figma.com/file/IIfkCijDDmBuGX6P8A6SBS/fantasy-hero?node-id=0%3A1)
