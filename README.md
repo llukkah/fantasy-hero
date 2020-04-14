@@ -38,7 +38,7 @@ MVP consists of creating a working product that allows users to create their own
  - Transformation into turn based battle game based on randomized HP & Attack values
  
 
-### Wireframes/UI/System Design
+### Wireframes/UI/System Architecture Design(In Progress)
 #### Wireframes by Figma:
 ![UI](./wireframes/fantasy-hero.png)
 [**Click here for Figma's verison of the wireframe**](https://www.figma.com/file/IIfkCijDDmBuGX6P8A6SBS/fantasy-hero?node-id=0%3A1)
@@ -59,33 +59,76 @@ Express
 React
 Node.js
 ```
-#### Component Heirarchy 
 
+#### Folders
 ```
-React Setup:
-src
-|__ assets/
+|__ public
   |__ wireframes
-|__ Shared/
-  |__ Layout.jsx
-  |__ Sort.js
-|__ components/
-  |__ App.jsx
-  |__ Header.jsx
-  |__ Landing.jsx
-    |__RandomizeText.jsx
-  |__ReadHeroProfiles.jsx     
-    |__CreateHeroProfile.jsx
-  |__ReadSingleHero.jsx
-    |__UpdateHeroProfile.jsx
-    |__DeleteHeroProfile.js
-  |__ Footer.jsx
+  |__ login-images
 ```
-#### MongoDB Heirarchy 
+```
+|__ assets
+  |__ styles
+    |__ css
+  |__ tests(not mvp)
+```
+
+#### React/Express 
 
 ```
-MongoDB Setup: 
-|__ Models
+Front-End Setup:
+|__ client
+  |__ src/
+    |__ components/
+      |__ Shared/
+        |__ Footer.jsx
+        |__ HeroForm.jsx
+        |__ Layout.jsx
+    =>Sort.js? helpers?
+    |__ routes/
+        |__ AuthenticatedRoutes.jsx
+        |__ index.js
+    |__ screens/
+        |__ Landing.jsx
+        |__ Header.jsx
+        |__ Heros.jsx
+        |__ HeroCreate.jsx
+        |__ HeroEdit.jsx
+        |__ SingleHeroView.jsx
+        |__ SignUp.jsx
+        |__ SignIn.jsx
+        |__ ChangePassword.jsx
+    |__ services/
+        |__ apiConfig.jsx
+        |__ auth.js
+        |__ heros.js //apicrud
+    |__ App.jsx
+    =>RandomizeText.js? //helpers?
+```
+```
+|__ routes/
+  |__ index.js/
+
+```
+#### MongoDB/JWT/Authentication
+```
+Backend Setup: 
+|__ controllers/
+  |__ index.js/
+```
+```
+|__ helpers/ 
+  |__ index.js/
+```
+```
+|__ db/
+  |__ index.js/
+```
+```
+|__ models
+  |__ Account.js?
+    |__username: string
+    |__password: string
   |__ Class.js
     |__class: string
         [(
@@ -102,4 +145,10 @@ MongoDB Setup:
     |__atk: int
     |__weapon: string
     |__img: string 
+```
+```
+  |__ seed
+    |__ Accounts.js
+    |__ Classes.js
+    |__ Heros.js
 ```
