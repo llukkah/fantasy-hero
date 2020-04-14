@@ -12,7 +12,7 @@ Try it out for yourself or check out our heroes that we have made in the past!
 MVP consists of creating a working product that allows users to create their own custom characters, view existing characters on a page, and update/remove their characters. 
 
 ### Deployment
-- Front end React app will be deployed via [Surge](https://surge.sh/)
+- Front end React app will be deployed via [Netlify](https://www.netlify.com/)
 - Backend will be deployed via [Heroku](heroku.com)
 - MongoDB database will be deployed to [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 
