@@ -6,10 +6,11 @@ const Hero = (props) => {
     return (
         <>
             <Link className="product" to={`/heroes/${props._id}`}>
-                <img className="product-image" src={props.imgURL} alt={props.name} />
+                <img className="product-image" src={props.img} alt={props.name} />
                 <div className="product-name">{props.name}</div>
-                <div className="price">{`${props.race}`}</div>
-                <div className="price">{`${props.weapon}`}</div>
+                <div className="price">{props.race}</div>
+                <div className="weapon">{props.weapon}</div>
+                <div className="specialty">{props.spec}</div>
             </Link>
         </>
     )
