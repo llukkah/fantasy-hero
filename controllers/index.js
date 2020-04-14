@@ -72,14 +72,6 @@ const verifyUser = (req, res) => {
 const changePassword = async (req, res) => { }
 
 
-const getSpecialty = async (req, res) => {
-  try {
-
-    res.status(404).json({ message: 'Product not found!' })
-} catch (error) {
-    res.status(500).json({ error: error.message })
-}
-}
 
 const getHeroes = async (req, res) => {
     try {
@@ -162,7 +154,6 @@ module.exports = {
     signIn,
     verifyUser,
     changePassword,
-    getSpecialty,
     createHero,
     getHeroes,
     getHero,
