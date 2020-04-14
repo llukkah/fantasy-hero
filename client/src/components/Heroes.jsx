@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import './Products.css'
-import Product from './Product'
+import Hero from './Hero'
 import Search from './Search'
 import { AZ, ZA, lowestFirst, highestFirst } from "./Sort"
 import Layout from './shared/Layout'
-import { getProducts } from '../services/product'
+import { getHeroes } from '../services/hero'
 
-class Products extends Component {
+class Heroes extends Component {
   constructor() {
     super()
     this.state = {
-      products: [],
+      heroes: [],
       filterValue: '',
       filteredProducts: null,
       selectValue: 'Featured'
@@ -18,16 +18,16 @@ class Products extends Component {
   }
 
   async componentDidMount() {
-    const products = await getProducts()
-    this.setState({ products })
+    const heroes = await getHeroes()
+    this.setState({ heroes })
   }
 
   handleSearchChange = event => {
     const filter = () => {
-      const filteredProducts = this.state.products.filter(product => {
-        return product.name.toLowerCase().includes(this.state.filterValue.toLowerCase())
+      const filteredProducts = this.state.heroes.filter(hero => {
+        return hero.name.toLowerCase().includes(this.state.filterValue.toLowerCase())
       })
-      this.setState({ filteredProducts })
+      this.setState({ filteredProducts }) // come back 
     }
     this.setState({ filterValue: event.target.value }, filter)
   }
@@ -35,26 +35,26 @@ class Products extends Component {
   handleSortChange = event => {
     this.setState({ selectValue: event.target.value });
     let input = event.target.value; // a-z
-    const { products } = this.state;
+    const { heroes } = this.state;
     switch (input) {
       case "name-ascending":
         this.setState({
-          products: AZ(products)
+          products: AZ(heroes)
         });
         break;
       case "name-descending":
         this.setState({
-          products: ZA(products)
+          products: ZA(heroes)
         });
         break;
       case "price-ascending":
         this.setState({
-          products: lowestFirst(products)
+          products: lowestFirst(heroes)
         });
         break;
       case "price-descending":
         this.setState({
-          products: highestFirst(products)
+          products: highestFirst(heroes)
         });
         break;
       default:
@@ -65,9 +65,11 @@ class Products extends Component {
   handleSubmit = event => event.preventDefault()
 
   render() {
-    const products = this.state.filteredProducts ? this.state.filteredProducts : this.state.products
-    const PRODUCTS = products.map((product, index) =>
-      <Product _id={product._id} name={product.name} imgURL={product.imgURL} price={product.price} key={index} />
+    console.log(this.state.heroes)
+    console.log(this.state.heroes.specialty)
+    const heroes = this.state.filteredProducts ? this.state.filteredProducts : this.state.heroes
+    const HEROES = heroes.map((hero, index) =>
+      <Hero _id={hero._id} name={hero.name} imgURL={hero.img} race={hero.race} weapon={hero.weapon} key={index} />
     )
 
     return (
@@ -83,11 +85,11 @@ class Products extends Component {
           </select>
         </form>
         <div className="products">
-          {PRODUCTS}
+          {HEROES}
         </div>
       </Layout>
     )
   }
 }
 
-export default Products
+export default Heroes
