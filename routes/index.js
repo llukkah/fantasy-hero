@@ -14,7 +14,7 @@ router.post('/change-password', controllers.changePassword)
 router.get('/heroes', controllers.getHeroes)
 router.get('/heroes/:id', controllers.getHero)
 router.post('/create-hero', restrict, controllers.createHero)
-router.put('/heroes/:id/edit', restrict, controllers.updateHero)
+router.put('/heroes/:id', restrict, controllers.updateHero)
 router.delete('/heroes/:id', restrict, controllers.deleteHero)
 
 module.exports = router

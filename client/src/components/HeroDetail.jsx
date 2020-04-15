@@ -23,7 +23,7 @@ class HeroDetail extends Component {
         // let { id } = this.props.match.params
         // const hero = await getHero(id)
         // this.setState({ hero })
-        console.log(this.props.state)
+
         this.setState({ hero: this.props.location.state })
     }
 
