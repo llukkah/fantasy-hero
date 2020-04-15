@@ -29,7 +29,7 @@ export const getSpecialty = async () => {
 
 export const createHero = async hero => {
   try {
-      const response = await api.post('/heroes', hero)
+      const response = await api.post('/create-hero', hero)
       return response.data
   } catch (error) {
       throw error

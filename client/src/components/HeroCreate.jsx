@@ -10,7 +10,7 @@ class HeroCreate extends Component {
         this.state = {
             hero: {
                 name: '',
-                specialty: {}, //Come back to this
+                specialty: null, //Come back to this
                 race: '',
                 hp: 100,
                 atk: 50,
@@ -44,7 +44,8 @@ class HeroCreate extends Component {
     handleSubmit = async (event) => {
         event.preventDefault()
         const created = await createHero(this.state.hero)
-        this.setState({ created })
+      this.setState({ created })
+      console.log(this.state.hero)
     }
 
     render() {
@@ -65,21 +66,13 @@ class HeroCreate extends Component {
                         autoFocus
                         onChange={this.handleChange}
                     />
-                    <select className="input-price">
+              <select name="specialty" onChange={this.handleChange} className="input-price">
                         <option value={this.state.list[0]}>Mage</option>
                         <option value={this.state.list[1]}>Warrior</option>
                         <option value={this.state.list[2]}>Hunter</option>
                         <option value={this.state.list[3]}>Healer</option>
                         <option value={this.state.list[4]}>Rouge</option>
                     </select>
-                    {/* <input
-                        className="input-price"
-                        placeholder='Specialty'
-                        value={hero.specialty} // change this to a dropdown
-                        name='specialty'
-                        required
-                        onChange={this.handleChange}
-                    /> */}
                     <textarea
                         className="textarea-description"
                         rows={10}
