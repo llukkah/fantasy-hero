@@ -9,7 +9,7 @@ class HeroDetail extends Component {
         super(props)
         this.state = {
           hero: {
-            _id: '',
+            _id:'',
             name: '',
             race: '',
             weapon: '',
