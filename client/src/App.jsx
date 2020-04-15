@@ -10,6 +10,10 @@ import { verifyUser } from './services/user'
 import SignUp from './components/SignUp'
 import SignIn from './components/SignIn'
 import SignOut from './components/SignOut'
+import Heroes from "./components/Heroes"
+import HeroDetail from "./components/HeroDetail"
+import HeroEdit from "./components/HeroEdit"
+import HeroCreate from "./components/HeroCreate"
 
 class App extends Component {
   constructor() {
@@ -40,10 +44,10 @@ class App extends Component {
           <Route exact path="/sign-up" render={props => <SignUp setUser={setUser} history={props.history} />} />
           <Route exact path="/sign-in" render={props => <SignIn setUser={setUser} history={props.history} />} />
           <Route exact path="/sign-out" render={props => <SignOut user={user} clearUser={clearUser} history={props.history} />} />
-          <Route exact path="/heroes" render={() => <Products user={user} />} />
-          <Route  exact path="/create-hero" render={() => user ? <ProductCreate user={user} /> : <Redirect to='/signup' />}/>
-          <Route  exact path="/heroes/:id/edit" render={(props) => user ? <ProductEdit { ...props } user={user} /> : <Redirect to='/' />}/>
-          <Route exact path="/heroes/:id" render={(props) => <ProductDetail { ...props } history={props.history} user={user}/>} />
+          <Route exact path="/heroes" render={() => <Heroes user={user} />} />
+          <Route  exact path="/create-hero" render={() => user ? <HeroCreate user={user} /> : <Redirect to='/signup' />}/>
+          <Route  exact path="/heroes/:id/edit" render={(props) => user ? <HeroEdit { ...props } user={user} /> : <Redirect to='/' />}/>
+          <Route exact path="/heroes/:id" render={(props) => <HeroDetail { ...props } history={props.history} user={user}/>} />
         </Switch>
       </div>
     )

@@ -86,11 +86,8 @@ const getHeroes = async (req, res) => {
       for (let i = 0; i < result.length; i++){
         name.push(result[i].name)
       }
-
-
       let heroCopy = [...heros]
       // console.log(heroCopy)
-
       for (let i = 0; i < heros.length; i++) {
         heros[i].spec = name[i]
         // console.log(heros[i].spec)
@@ -118,6 +115,15 @@ const getHero = async (req, res) => {
         }
         res.status(404).json({ message: 'Product not found!' })
     } catch (error) {
+        res.status(500).json({ error: error.message })
+    }
+}
+
+const getSpecialty = async (req, res) => {
+    try {
+        const specialty = Specialty.find()
+        console.log(specialty);
+    } catch(e) {
         res.status(500).json({ error: error.message })
     }
 }
@@ -164,6 +170,7 @@ module.exports = {
     signIn,
     verifyUser,
     changePassword,
+    getSpecialty,
     createHero,
     getHeroes,
     getHero,
