@@ -86,11 +86,8 @@ const getHeroes = async (req, res) => {
       for (let i = 0; i < result.length; i++){
         name.push(result[i].name)
       }
-
-
       let heroCopy = [...heros]
       // console.log(heroCopy)
-
       for (let i = 0; i < heros.length; i++) {
         heros[i].spec = name[i]
         // console.log(heros[i].spec)
