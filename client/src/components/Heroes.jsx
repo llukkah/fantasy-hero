@@ -20,25 +20,14 @@ class Heroes extends Component {
 
   async componentDidMount() {
     const heros = await getHeroes();
+    console.log(heros)
     this.setState({
       heroes: heros.hero,
       specialtys: heros.names,
     });
 
-    const heroCopy = [...this.state.heroes];
 
-    for (let i = 0; i < this.state.heroes.length; i++) {
-      for (let j = 0; j < this.state.specialtys.length; j++) {
-        // create a copy this.state.heroes const herov2 =
-        heroCopy[i].spec = this.state.specialtys[j];
-      }
-    }
-
-    this.setState({
-      heroes: heroCopy
-      // heros: (this.state.heroes[i].spec = this.state.specialtys[i]),
-    });
-
+    // console.log(this.state.heroes)
     // const specMap = specialtys.map(special => this.state.heros.push(special))
   }
 
@@ -92,9 +81,9 @@ class Heroes extends Component {
       : this.state.heroes;
 
     // ========================================
-    if (this.state.heroes.length > 1) {
-      console.log(this.state.heroes);
-    }
+    // if (this.state.heroes.length > 1) {
+    //   console.log(this.state.heroes);
+    // }
 
     const HEROES = heroes.map((hero, index) => (
       <Hero
