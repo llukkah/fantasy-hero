@@ -65,14 +65,21 @@ class HeroCreate extends Component {
                         autoFocus
                         onChange={this.handleChange}
                     />
-                    <input
+                    <select className="input-price">
+                        <option value={this.state.list[0]}>Mage</option>
+                        <option value={this.state.list[1]}>Warrior</option>
+                        <option value={this.state.list[2]}>Hunter</option>
+                        <option value={this.state.list[3]}>Healer</option>
+                        <option value={this.state.list[4]}>Rouge</option>
+                    </select>
+                    {/* <input
                         className="input-price"
                         placeholder='Specialty'
                         value={hero.specialty} // change this to a dropdown
                         name='specialty'
                         required
                         onChange={this.handleChange}
-                    />
+                    /> */}
                     <textarea
                         className="textarea-description"
                         rows={10}
