@@ -8,7 +8,8 @@ class HeroEdit extends Component {
     constructor(props) {
         super(props)
         this.state = {
-          Hero: {
+          hero: {
+            _id: '',
             name: '',
             specialty: {}, //Come back to this
             race: '',
@@ -25,6 +26,8 @@ class HeroEdit extends Component {
         let { id } = this.props.match.params
         const hero = await getHero(id)
         this.setState({ hero })
+        // console.log(this.state.hero)
+        // console.log(this.state.hero._id)
     }
 
 
@@ -43,21 +46,29 @@ class HeroEdit extends Component {
         let { id } = this.props.match.params
         const updated = await updateHero(id, this.state.hero)
         this.setState({ updated })
+        // console.log(this.state.updated)
     }
 
     render() {
 
         const { hero, updated } = this.state
 
+// =========COME BACK TO THIS========================
         if (updated) {
-            return <Redirect to={`/heroes/${this.props.match.params.id}`} />
+            return <Redirect to={`/heroes`} />
+            // return <Redirect to={{
+            //     pathname: `/heroes/${this.state.hero._id}`,
+            //     state: { hero: updated }
+            // }} />
         }
+// =========COME BACK TO THIS========================
+
 
         return (
             <Layout user={this.props.user}>
                 <div className="product-edit">
                     <div className="image-container">
-                        <img className="edit-product-image" src={hero.img} alt={hero.name} />
+                        {/* <img className="edit-product-image" src={hero.img} alt={hero.name} /> */}
                         <form onSubmit={this.handleSubmit}>
                             <input
                                 className="edit-input-image-link"
@@ -83,7 +94,7 @@ class HeroEdit extends Component {
                             className="input-price"
                             placeholder='Price'
                             value={hero.specialty} // come back to this
-                            name='price'
+                            name='specialty'
                             required
                             onChange={this.handleChange}
                         />
@@ -91,7 +102,7 @@ class HeroEdit extends Component {
                             className="input-price"
                             placeholder='Price'
                             value={hero.race} // come back to this
-                            name='price'
+                            name='race'
                             required
                             onChange={this.handleChange}
                         />
@@ -99,7 +110,7 @@ class HeroEdit extends Component {
                             className="input-price"
                             placeholder='Price'
                             value={hero.weapon} // come back to this
-                            name='price'
+                            name='weapon'
                             required
                             onChange={this.handleChange}
                         />
