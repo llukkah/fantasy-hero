@@ -8,7 +8,7 @@ class HeroEdit extends Component {
     constructor(props) {
         super(props)
         this.state = {
-          Hero: {
+          hero: {
             name: '',
             specialty: {}, //Come back to this
             race: '',
