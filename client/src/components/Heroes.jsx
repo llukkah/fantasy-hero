@@ -25,22 +25,24 @@ class Heroes extends Component {
       specialtys: heros.names,
     });
 
-    const heroCopy = [...this.state.heroes];
-
+    const [...heroCopy] = [...this.state.heroes];
+    const { heroes, specialtys } = this.state;
     for (let i = 0; i < this.state.heroes.length; i++) {
-      for (let j = 0; j < this.state.specialtys.length; j++) {
-        // create a copy this.state.heroes const herov2 =
-        heroCopy[i].spec = this.state.specialtys[j];
-      }
-    }
+      // create a copy this.state.heroes const herov2 =
+      heroCopy[i].spec = this.state.specialtys[i];
 
+    }
+  }
+  mergeSpec = () => {
+    heroes.forEach((e, i) => heroCopy[i].spec = this.state.specialtys[i])
+    console.log(heroCopy)
     this.setState({
       heroes: heroCopy
       // heros: (this.state.heroes[i].spec = this.state.specialtys[i]),
     });
-
-    // const specMap = specialtys.map(special => this.state.heros.push(special))
   }
+  // const specMap = specialtys.map(special => this.state.heros.push(special))
+
 
   handleSearchChange = (event) => {
     const filter = () => {
