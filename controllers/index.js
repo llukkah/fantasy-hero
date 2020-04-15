@@ -119,6 +119,15 @@ const getHero = async (req, res) => {
     }
 }
 
+const getSpecialty = async (req, res) => {
+    try {
+        const specialty = Specialty.find()
+        console.log(specialty);
+    } catch(e) {
+        res.status(500).json({ error: error.message })
+    }
+}
+
 const createHero = async (req, res) => {
     try {
         const hero = await new Hero(req.body)
@@ -161,6 +170,7 @@ module.exports = {
     signIn,
     verifyUser,
     changePassword,
+    getSpecialty,
     createHero,
     getHeroes,
     getHero,

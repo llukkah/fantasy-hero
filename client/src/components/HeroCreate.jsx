@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import './ProductCreate.css'
 import Layout from './shared/Layout'
 import { Redirect } from 'react-router-dom'
-import { createHero } from '../services/hero'
+import { getSpecialty , createHero } from '../services/hero'
 
 class HeroCreate extends Component {
     constructor() {
         super()
         this.state = {
-            Hero: {
+            hero: {
                 name: '',
                 specialty: {}, //Come back to this
                 race: '',
@@ -17,8 +17,17 @@ class HeroCreate extends Component {
                 weapon: '',
                 img: '',
             },
-            created: false
+            created: false,
+            list: '',
         }
+    }
+
+    componentDidMount = async () => {
+        const specialty = await getSpecialty();
+        this.setState({
+            list: specialty
+        })
+        console.log(this.state.list)
     }
 
     handleChange = (event) => {
@@ -58,26 +67,26 @@ class HeroCreate extends Component {
                     />
                     <input
                         className="input-price"
-                        placeholder='Price'
+                        placeholder='Specialty'
                         value={hero.specialty} // change this to a dropdown
-                        name='price'
+                        name='specialty'
                         required
                         onChange={this.handleChange}
                     />
                     <textarea
                         className="textarea-description"
                         rows={10}
-                        placeholder='Description'
+                        placeholder='Enter a race'
                         value={hero.race}
-                        name='description'
+                        name='race'
                         required
                         onChange={this.handleChange}
                     />
                     <input
                         className="input-image-link"
-                        placeholder='Image Link'
+                        placeholder='Weapon'
                         value={hero.weapon}
-                        name='imgURL'
+                        name='weapon'
                         required
                         onChange={this.handleChange}
                     />
@@ -85,7 +94,7 @@ class HeroCreate extends Component {
                         className="input-image-link"
                         placeholder='Image Link'
                         value={hero.img}
-                        name='imgURL'
+                        name='img'
                         required
                         onChange={this.handleChange}
                     />
