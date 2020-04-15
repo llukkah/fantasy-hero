@@ -66,7 +66,7 @@ class HeroCreate extends Component {
                         autoFocus
                         onChange={this.handleChange}
                     />
-              <select name="specialty" onChange={this.handleChange} className="input-price">
+                    <select name="specialty" onChange={this.handleChange} className="input-price">
                         <option value={this.state.list[0]}>Mage</option>
                         <option value={this.state.list[1]}>Warrior</option>
                         <option value={this.state.list[2]}>Hunter</option>
