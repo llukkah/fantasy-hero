@@ -92,7 +92,7 @@ class HeroEdit extends Component {
                         />
                         <input
                             className="input-price"
-                            placeholder='Price'
+                            placeholder='Specialty'
                             value={hero.specialty} // come back to this
                             name='specialty'
                             required
@@ -100,7 +100,7 @@ class HeroEdit extends Component {
                         />
                         <input
                             className="input-price"
-                            placeholder='Price'
+                            placeholder='Race'
                             value={hero.race} // come back to this
                             name='race'
                             required
@@ -108,7 +108,7 @@ class HeroEdit extends Component {
                         />
                         <input
                             className="input-price"
-                            placeholder='Price'
+                            placeholder='Weapon'
                             value={hero.weapon} // come back to this
                             name='weapon'
                             required

@@ -119,6 +119,21 @@ const getHero = async (req, res) => {
     }
 }
 
+const getSpecialty = async (req, res) => {
+    try {
+        const specialty = await Specialty.find()
+        // console.log(specialty);
+        let specIds = [];
+        specialty.forEach(ele => specIds.push(ele._id))
+        // console.log(specIds)
+        if(specialty) {
+            return res.json(specIds)
+        }
+    } catch(e) {
+        res.status(500).json({ error: error.message })
+    }
+}
+
 const createHero = async (req, res) => {
     try {
         const hero = await new Hero(req.body)
@@ -161,6 +176,7 @@ module.exports = {
     signIn,
     verifyUser,
     changePassword,
+    getSpecialty,
     createHero,
     getHeroes,
     getHero,

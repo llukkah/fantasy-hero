@@ -2,23 +2,32 @@ import React, { Component } from 'react'
 import './ProductCreate.css'
 import Layout from './shared/Layout'
 import { Redirect } from 'react-router-dom'
-import { createHero } from '../services/hero'
+import { getSpecialty , createHero } from '../services/hero'
 
 class HeroCreate extends Component {
     constructor() {
         super()
         this.state = {
-            Hero: {
+            hero: {
                 name: '',
-                specialty: {}, //Come back to this
+                specialty: null, //Come back to this
                 race: '',
                 hp: 100,
                 atk: 50,
                 weapon: '',
                 img: '',
             },
-            created: false
+            created: false,
+            list: '',
         }
+    }
+
+    componentDidMount = async () => {
+        const specialty = await getSpecialty();
+        this.setState({
+            list: specialty
+        })
+        console.log(this.state.list)
     }
 
     handleChange = (event) => {
@@ -35,7 +44,8 @@ class HeroCreate extends Component {
     handleSubmit = async (event) => {
         event.preventDefault()
         const created = await createHero(this.state.hero)
-        this.setState({ created })
+      this.setState({ created })
+      console.log(this.state.hero)
     }
 
     render() {
@@ -56,28 +66,27 @@ class HeroCreate extends Component {
                         autoFocus
                         onChange={this.handleChange}
                     />
-                    <input
-                        className="input-price"
-                        placeholder='Price'
-                        value={hero.specialty} // change this to a dropdown
-                        name='price'
-                        required
-                        onChange={this.handleChange}
-                    />
+              <select name="specialty" onChange={this.handleChange} className="input-price">
+                        <option value={this.state.list[0]}>Hunter</option>
+                        <option value={this.state.list[1]}>Mage</option>
+                        <option value={this.state.list[2]}>Healer</option>
+                        <option value={this.state.list[3]}>Rogue</option>
+                        <option value={this.state.list[4]}>Warrior</option>
+                    </select>
                     <textarea
                         className="textarea-description"
                         rows={10}
-                        placeholder='Description'
+                        placeholder='Enter a race'
                         value={hero.race}
-                        name='description'
+                        name='race'
                         required
                         onChange={this.handleChange}
                     />
                     <input
                         className="input-image-link"
-                        placeholder='Image Link'
+                        placeholder='Weapon'
                         value={hero.weapon}
-                        name='imgURL'
+                        name='weapon'
                         required
                         onChange={this.handleChange}
                     />
@@ -85,7 +94,7 @@ class HeroCreate extends Component {
                         className="input-image-link"
                         placeholder='Image Link'
                         value={hero.img}
-                        name='imgURL'
+                        name='img'
                         required
                         onChange={this.handleChange}
                     />
