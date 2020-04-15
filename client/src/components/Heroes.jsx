@@ -24,9 +24,7 @@ class Heroes extends Component {
       heroes: heros.hero,
       specialtys: heros.names,
     });
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     const [...heroCopy] = [...this.state.heroes];
     const { heroes, specialtys } = this.state;
     for (let i = 0; i < this.state.heroes.length; i++) {
@@ -40,17 +38,9 @@ class Heroes extends Component {
     console.log(heroCopy)
     this.setState({
       heroes: heroCopy
-      // heros: (this.state.heroes[i].spec = this.state.specialtys[i]),
     });
-=======
 
-    // console.log(this.state.heroes)
-    // const specMap = specialtys.map(special => this.state.heros.push(special))
->>>>>>> 2a4db2422af25f0e93ebf20e45eb9e17f0c4dd3b
-=======
->>>>>>> 9909a80a6bd3786789b50708ae4d8e5f3342a58e
   }
-  // const specMap = specialtys.map(special => this.state.heros.push(special))
 
 
   handleSearchChange = (event) => {
