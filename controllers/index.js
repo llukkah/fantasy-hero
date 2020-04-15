@@ -121,8 +121,14 @@ const getHero = async (req, res) => {
 
 const getSpecialty = async (req, res) => {
     try {
-        const specialty = Specialty.find()
-        console.log(specialty);
+        const specialty = await Specialty.find()
+        // console.log(specialty);
+        let specIds = [];
+        specialty.forEach(ele => specIds.push(ele._id))
+        // console.log(specIds)
+        if(specialty) {
+            return res.json(specIds)
+        }
     } catch(e) {
         res.status(500).json({ error: error.message })
     }
