@@ -20,15 +20,10 @@ class Heroes extends Component {
 
   async componentDidMount() {
     const heros = await getHeroes();
-    console.log(heros)
     this.setState({
       heroes: heros.hero,
       specialtys: heros.names,
     });
-
-
-    // console.log(this.state.heroes)
-    // const specMap = specialtys.map(special => this.state.heros.push(special))
   }
 
   handleSearchChange = (event) => {
@@ -80,10 +75,6 @@ class Heroes extends Component {
       ? this.state.filteredProducts
       : this.state.heroes;
 
-    // ========================================
-    // if (this.state.heroes.length > 1) {
-    //   console.log(this.state.heroes);
-    // }
 
     const HEROES = heroes.map((hero, index) => (
       <Hero
