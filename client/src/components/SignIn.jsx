@@ -32,7 +32,7 @@ class SignIn extends Component {
             .then(res => {
                 setUser(res.user)
             })
-            .then(() => history.push('/'))
+            .then(() => history.push('/home'))
             .catch(error => {
                 console.error(error)
                 this.setState({
