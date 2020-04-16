@@ -12,7 +12,8 @@ const Hero = (props) => {
                 race: props.race,
                 weapon: props.weapon,
                 img: props.img,
-                spec: props.spec
+                spec: props.spec,
+                description: props.description
             }
         }}>
                 <img className="product-image" src={props.img} alt={props.name} />

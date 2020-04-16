@@ -15,6 +15,7 @@ class HeroDetail extends Component {
             weapon: '',
             img: '',
             spec: '',
+            description: ''
         }
       }
     }
@@ -38,6 +39,7 @@ class HeroDetail extends Component {
                         <div className="name">{hero.name}</div>
                         <div className="price">{hero.spec}</div>
                         <div className="description">{hero.race}</div>
+                        <div className="description">{hero.description}</div>
                         <div className="price">{hero.weapon}</div>
                         <div className="button-container">
                         <button className="edit-button">
