@@ -17,22 +17,22 @@ body {
     background-color: #2F4858;
     padding: 50px;
 }
-.name {
+.detail-name {
     font-size: 64px;
     letter-spacing: 1px;
     padding: 5px;
     text-align: center;
 }
-.specialty,
-.race,
-.weapon {
+.detail-specialty,
+.detail-race,
+.detail-weapon {
     font-size: 20px;
     margin-top: 5px;
 }
-span {
+.detail-span {
     font-size: 15px;
 }
-.description {
+.detail-description {
     padding: 10px;
     letter-spacing: .9px;
 }
