@@ -9,6 +9,7 @@ body {
   font-size: 2.7em;
   margin-top: -15px;
   margin-bottom: 20px;
+  color: white;
 }
 
 .create-form {
@@ -27,8 +28,10 @@ select:focus {
 }
 
 form {
-  background-color: whitesmoke;
+  background-color: black;
   overflow: hidden;
+  border: 2px white solid;
+  padding: 10px;
 }
 
 form>* {
@@ -48,8 +51,11 @@ textarea {
 .textarea-description {
   padding-left: 11px;
   height: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  background-color: black;
+  color: white;
   margin: 10px;
+  border: 2px solid white;
 }
 
 textarea {
@@ -58,21 +64,28 @@ textarea {
 }
 
 .input-name {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: black;
+  color: white;
   margin: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.475);
   font-size: 48px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .race-select {
   margin: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: black;
+  border: 2px solid white;
+  color: white;
   padding-left: 10px;
   font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .input-specialty {
+  background-color: black;
+  border: 2px solid white;
+  color: white;
   margin: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding-left: 11px;
@@ -82,9 +95,12 @@ textarea {
 
 .input-image-link {
   padding-left: 11px;
+  background-color: black;
   height: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+  border: 2px solid white;
   font-size: 18px;
+  border-radius: 5px;
   margin: 10px;
   font-family: Arial, Helvetica, sans-serif;
 }
