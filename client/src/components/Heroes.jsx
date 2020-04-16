@@ -84,6 +84,7 @@ class Heroes extends Component {
         race={hero.race}
         spec={hero.spec}
         weapon={hero.weapon}
+        description={hero.description}
         key={index}
       />
     ));

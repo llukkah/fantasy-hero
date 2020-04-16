@@ -85,12 +85,12 @@ class HeroEdit extends Component {
                             onChange={this.handleChange}
                         />
                         <input
-                            className="input-price"
-                            placeholder='Specialty'
-                            value={hero.specialty} // come back to this
-                            name='specialty'
-                            required
-                            onChange={this.handleChange}
+                        className="input-price"
+                        placeholder='Enter a description'
+                        value={hero.description}
+                        name='description'
+                        required
+                        onChange={this.handleChange}
                         />
                         <input
                             className="input-price"
