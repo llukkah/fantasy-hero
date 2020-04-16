@@ -80,10 +80,11 @@ class Heroes extends Component {
       <Hero
         _id={hero._id}
         name={hero.name}
-        imgURL={hero.img}
+        img={hero.img}
         race={hero.race}
         spec={hero.spec}
         weapon={hero.weapon}
+        description={hero.description}
         key={index}
       />
     ));
