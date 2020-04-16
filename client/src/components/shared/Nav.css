@@ -1,11 +1,11 @@
 /* @import url('https://fonts.googleapis.com/css?family=Kalam&display=swap'); */
-@import url('https://fonts.googleapis.com/css?family=Manrope|Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Manrope|Open+Sans|Raleway&display=swap');
 
 nav {
     flex: 1;
     position: fixed;
     width: 100%;
-    background-color: white;
+    background-color: black;
     z-index: 1;
     top: 0;
     left: 0;
@@ -13,20 +13,20 @@ nav {
 
 .nav {
     display: flex;
+    flex-flow: row nowrap;
     padding: 20px 0;
-    margin-left: -2px;
+    /* margin-left: -2px;
     margin-right: -2px;
-    margin-top: -2px;
-    box-shadow: 1px 1px 1px .3px #CECECE;
+    margin-top: -2px; */
+    /* box-shadow: 1px 1px 1px .3px #CECECE; */
     width: 100%;
 }
 
 .logo {
     font-family: 'Raleway', sans-serif;
     text-align: center;
-    font-weight: bold;
     font-size: 34px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     flex: 1;
     max-width: 30vw;
     transition: 250ms all;
@@ -34,6 +34,8 @@ nav {
 
 .logo:hover {
     transform: scale(1.004);
+    transition: all 0.5s ease-in;
+    color: #9CABA6;
 }
 
 .links {
@@ -44,9 +46,9 @@ nav {
     display: flex;
 }
 
-.link {
+/* .link {
     flex: 1;
-}
+} */
 
 .welcome {
     padding: 0 100px;
@@ -54,7 +56,14 @@ nav {
 
 a {
     text-decoration: none;
-    color: black;
+    color: white;
+    width: 100px;
+}
+
+a:hover {
+    transition: all 0.5s ease-in;
+    color: #9CABA6;
+    opacity: .5;
 }
 
 @media (max-width: 500px) {
