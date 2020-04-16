@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './ProductDetail.css'
+import './HeroDetail.css'
 import Layout from './shared/Layout'
 import { getHero, deleteHero } from '../services/hero'
 import { Link } from 'react-router-dom'
