@@ -61,8 +61,7 @@ class HeroCreate extends Component {
         <form className="create-form" onSubmit={this.handleSubmit}>
           <h1 className="form-title">Create your own hero</h1>
           <input
-            id="create-name"
-            className="input-name"
+            className="create-input-name create-input-focus"
             placeholder='Name'
             value={hero.name}
             name='name'
@@ -70,7 +69,7 @@ class HeroCreate extends Component {
             autoFocus
             onChange={this.handleChange}
           />
-          <select name="specialty" onChange={this.handleChange} className="input-specialty">
+          <select name="specialty" onChange={this.handleChange} className="input-specialty create-input-focus">
             <option>Select Class</option>
             <option value={this.state.list[0]}>Healer</option>
             <option value={this.state.list[1]}>Hunter</option>
@@ -84,7 +83,7 @@ class HeroCreate extends Component {
           <select
             name="race"
             onChange={this.handleChange}
-            className="race-select">
+            className="race-select create-input-focus">
             <option>Select Race</option>
             <option value='human'>Human</option>
             <option value='orc'>orc</option>
@@ -96,7 +95,7 @@ class HeroCreate extends Component {
 
 
           <input
-            className="textarea-description"
+            className="create-textarea-description create-input-focus"
             rows={10}
             placeholder='Enter a description'
             value={hero.description}
@@ -105,7 +104,7 @@ class HeroCreate extends Component {
             onChange={this.handleChange}
           />
           <input
-            className="input-image-link"
+            className="create-weapon-input create-input-focus"
             placeholder='Weapon'
             value={hero.weapon}
             name='weapon'
@@ -113,14 +112,14 @@ class HeroCreate extends Component {
             onChange={this.handleChange}
           />
           <input
-            className="input-image-link"
+            className="input-image-link create-input-focus"
             placeholder='Image Link'
             value={hero.img}
             name='img'
             required
             onChange={this.handleChange}
           />
-          <button type='submit' className="submit-button">Submit</button>
+          <button type='submit' className="create-submit-button">Submit</button>
         </form>
       </Layout>
     )
