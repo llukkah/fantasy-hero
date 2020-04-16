@@ -1,14 +1,24 @@
-import React from 'react'
-import './Home.css'
-import Layout from './shared/Layout'
+import React from "react";
+import "./Home.css";
+import Layout from "./shared/Layout";
+import { Component } from "react";
 
-const Home = (props) => {
-  return (
-    <Layout user={props.user}>
-      <div className="home">
-      </div>
-    </Layout>
-  )
+class Home extends Component {
+  constructor() {
+    super();
+    // this.state = {
+    //   hero:
+    // }
+  }
+  render() {
+    return (
+      <Layout user={this.props.user}>
+        <div className="home">
+          <h1 className="meet">Meet Our Heros:</h1>
+        </div>
+      </Layout>
+    );
+  }
 }
 
-export default Home
+export default Home;

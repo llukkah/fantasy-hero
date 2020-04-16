@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Kalam&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Kalam&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Manrope|Raleway&display=swap');
 
 nav {
     flex: 1;
@@ -21,11 +22,11 @@ nav {
 }
 
 .logo {
-    font-family: 'Kalam', cursive;
+    font-family: 'Raleway', sans-serif;
     text-align: center;
     font-weight: bold;
     font-size: 34px;
-    letter-spacing: -3px;
+    letter-spacing: 2px;
     flex: 1;
     max-width: 30vw;
     transition: 250ms all;
