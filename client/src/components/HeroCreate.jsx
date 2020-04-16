@@ -77,7 +77,11 @@ class HeroCreate extends Component {
 
 
 
-          <select name="race" className="race-select">
+          <select
+            name="race"
+            onChange={this.handleChange}
+            className="race-select">
+            <option>Select Race</option>
             <option value='human'>Human</option>
             <option value='orc'>orc</option>
             <option value='elf'>Elf</option>
