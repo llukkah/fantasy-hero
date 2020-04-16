@@ -1,12 +1,29 @@
-@import url('https://fonts.googleapis.com/css?family=Manrope|Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Manrope|Open+Sans|Raleway&display=swap');
 
 * {
     margin: 0px;
     padding: 0px;
 }
 
+div.home {
+    display: flex;
+    flex-flow: column nowrap;
+    /* justify-items: center; */
+    align-items: center;
+}
+
 h1.meet {
     font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+div.aboutHero {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: black;
 }
 
 @media (max-width: 500px) {
