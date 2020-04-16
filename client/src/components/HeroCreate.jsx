@@ -45,7 +45,7 @@ class HeroCreate extends Component {
     event.preventDefault()
     const created = await createHero(this.state.hero)
     this.setState({ created })
-    console.log(this.state.hero)
+    console.log(this.state.list)
   }
 
   render() {
@@ -58,6 +58,7 @@ class HeroCreate extends Component {
       <Layout user={this.props.user}>
         <form className="create-form" onSubmit={this.handleSubmit}>
           <input
+            id="create-name"
             className="input-name"
             placeholder='Name'
             value={hero.name}
@@ -68,11 +69,11 @@ class HeroCreate extends Component {
           />
           <select name="specialty" onChange={this.handleChange} className="input-price">
             <option>SELECT A CLASS</option>
-            <option value={this.state.list[0]}>Hunter</option>
-            <option value={this.state.list[1]}>Mage</option>
-            <option value={this.state.list[2]}>Healer</option>
-            <option value={this.state.list[3]}>Rogue</option>
-            <option value={this.state.list[4]}>Warrior</option>
+            <option value={this.state.list[0]}>Healer</option>
+            <option value={this.state.list[1]}>Hunter</option>
+            <option value={this.state.list[2]}>Mage</option>
+            <option value={this.state.list[3]}>Warrior</option>
+            <option value={this.state.list[4]}>Rogue</option>
           </select>
 
 
@@ -91,15 +92,15 @@ class HeroCreate extends Component {
           </select>
 
 
-          {/* <input
-                        className="textarea-description"
-                        rows={10}
-                        placeholder='Enter a race'
-                        value={hero.race}
-                        name='race'
-                        required
-                        onChange={this.handleChange}
-                    /> */}
+          <input
+            className="textarea-description"
+            rows={10}
+            placeholder='Enter a description'
+            value={hero.description}
+            name='description'
+            required
+            onChange={this.handleChange}
+          />
           <input
             className="input-image-link"
             placeholder='Weapon'

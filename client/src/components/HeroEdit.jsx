@@ -17,10 +17,12 @@ class HeroEdit extends Component {
         atk: 50,
         weapon: '',
         img: '',
+        description: ''
       },
       updated: false
     }
   }
+
 
   async componentDidMount() {
     let { id } = this.props.match.params
@@ -62,14 +64,6 @@ class HeroEdit extends Component {
           <div className="image-container">
             {/* <img className="edit-product-image" src={hero.img} alt={hero.name} /> */}
             <form onSubmit={this.handleSubmit}>
-              <input
-                className="edit-input-image-link"
-                placeholder='Image Link'
-                value={hero.img}
-                name='imgURL'
-                required
-                onChange={this.handleChange}
-              />
             </form>
           </div>
           {/* <div className="stackDiv"> */}
@@ -85,26 +79,47 @@ class HeroEdit extends Component {
             />
             <input
               className="input-price"
-              placeholder='Specialty'
-              value={hero.specialty} // come back to this
-              name='specialty'
+              placeholder='Enter a description'
+              value={hero.description}
+              name='description'
               required
               onChange={this.handleChange}
             />
 
-            <input
+
+            <select
+              name="race"
+              onChange={this.handleChange}
+              className="race-select">
+              <option>Select Race</option>
+              <option value='human'>Human</option>
+              <option value='orc'>orc</option>
+              <option value='elf'>Elf</option>
+              <option value='dwarf'>Dwarf</option>
+              <option value='goblin'>Goblin</option>
+              <option value='troll'>Troll</option>
+            </select>
+            {/* <input
               className="input-price"
               placeholder='Race'
               value={hero.race} // come back to this
               name='race'
               required
               onChange={this.handleChange}
-            />
+            /> */}
             <input
               className="input-price"
               placeholder='Weapon'
               value={hero.weapon} // come back to this
               name='weapon'
+              required
+              onChange={this.handleChange}
+            />
+            <input
+              className="edit-input-image-link"
+              placeholder='Image Link'
+              value={hero.img}
+              name='img'
               required
               onChange={this.handleChange}
             />

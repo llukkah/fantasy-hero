@@ -15,9 +15,11 @@ class HeroDetail extends Component {
         weapon: '',
         img: '',
         spec: '',
+        description: ''
       }
     }
   }
+
 
   async componentDidMount() {
     // let { id } = this.props.match.params
@@ -38,10 +40,15 @@ class HeroDetail extends Component {
               <div className="name">{hero.name}</div>
               <div className="price">{hero.spec}</div>
               <div className="description">{hero.race}</div>
+              <div className="description">{hero.description}</div>
               <div className="price">{hero.weapon}</div>
               <div className="button-container">
-                <button className="edit-button"><Link className="edit-link" to={`/heroes/${hero._id}/edit`}>Edit</Link></button>
-                <button className="delete-button" onClick={() => deleteHero(hero._id)}><Link className="delete-link" to={`/heroes`}>Delete</Link></button>
+                <Link className="edit-link" to={`/heroes/${hero._id}/edit`}><button className="edit-button">
+                  Edit
+                </button></Link>
+                <Link onClick={() => deleteHero(hero._id)} to="/heroes">
+                  <button className="delete-button">Delete
+                </button></Link>
               </div>
             </div>
           </div>
