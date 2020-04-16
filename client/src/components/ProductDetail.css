@@ -1,16 +1,15 @@
-.product-detail {
+@import url('https://fonts.googleapis.com/css?family=Manrope|Raleway&display=swap');
+
+.hero-detail {
     display: flex;
     padding: 50px;
     /* background-color: #000; */
     color: #C7CDC7;
-    border: none;
-    box-shadow: 2px 2px 10px 10px #738A8A;
+    border: 2px solid #738A8A;
 }
-
 body {
     background-color: #000;
 }
-
 .detail {
     display: flex;
     flex-direction: column;
@@ -18,54 +17,41 @@ body {
     background-color: #2F4858;
     padding: 50px;
 }
-
 .name {
     font-size: 64px;
     letter-spacing: 1px;
     padding: 5px;
+    text-align: center;
 }
-
-.price,
-.description {
-    font-size: 28px;
+.specialty,
+.race,
+.weapon {
+    font-size: 20px;
+    margin-top: 5px;
 }
-
+span {
+    font-size: 15px;
+}
 .description {
     padding: 10px;
     letter-spacing: .9px;
 }
-
-.product-detail-image {
+/* .hero-image {
     width: 500px;
     padding: 0 40px;
-}
-
+} */
 .button-container {
+    padding-top: 30px;
     display: flex;
     justify-content: space-evenly;
+    letter-spacing: 5px;
+    font-weight: 700;
 }
-@import url('https://fonts.googleapis.com/css?family=Manrope|Raleway&display=swap');
-.edit-button, .delete-button {
-    font-size: 22px;
-    font-family: 'Manrope', 'Raleway', sans-serif;
+.edit-link,
+.delete-link {
     text-align: center;
-    height: 40px;
-    width: 50%;
-    align-self: center;
-    margin-top: 40px;
-    /* background-color: black; */
-    color:#C7CDC7;
-    cursor: pointer;
-}
-  
-  .button:hover {
-    /* The following line makes the underline only as wide as the text */
-    /* background-size: calc(100% - 2em) 5px, auto; */
-    background-size: 100% 5px, auto;
-  }
-
-.edit-link {
-    color: #C7CDC7;
+    border: 2px solid #738a8a;
+    padding: 5px;
 }
 
 @media (max-width: 1024px) {
@@ -86,19 +72,14 @@ body {
 }
 
 @media (max-width: 800px) {
-    .product-detail-image {
+    .hero-image {
         width: 300px;
         margin: 15px;
         padding: 10px;
     }
-    .product-detail {
+    .hero-detail {
         padding: 0px;
         padding-top: 120px;
-        /* margin: 0px; */
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; */
     }
     .button-container {
         /* display: flex;
@@ -107,7 +88,7 @@ body {
         padding: 20px;
         padding-bottom: 80px;
     }
-    .edit-button, .delete-button {
+    .edit-link, .delete-link {
         width: 40%;
     }
 }

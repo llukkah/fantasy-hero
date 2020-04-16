@@ -34,21 +34,17 @@ class HeroDetail extends Component {
     return (
       hero ?
         <Layout user={this.props.user}>
-          <div className="product-detail">
-            {/* <img className="product-detail-image" src={hero.img} alt={hero.name} /> */}
+          <div className="hero-detail">
+            {/* <img className="hero-img" src={hero.img} alt={hero.name} /> */}
             <div className="detail">
               <div className="name">{hero.name}</div>
-              <div className="price">{hero.spec}</div>
-              <div className="description">{hero.race}</div>
               <div className="description">{hero.description}</div>
-              <div className="price">{hero.weapon}</div>
+              <div className="specialty"><span>Specialty:</span> {hero.spec}</div>
+              <div className="race"><span>Race:</span> {hero.race}</div>
+              <div className="weapon"><span>Weapon:</span> {hero.weapon}</div>
               <div className="button-container">
-                <Link className="edit-link" to={`/heroes/${hero._id}/edit`}><button className="edit-button">
-                  Edit
-                </button></Link>
-                <Link onClick={() => deleteHero(hero._id)} to="/heroes">
-                  <button className="delete-button">Delete
-                </button></Link>
+                <Link className="edit-link" to={`/heroes/${hero._id}/edit`}>Edit</Link>
+                <Link className="delete-link" onClick={() => deleteHero(hero._id)} to="/heroes">Delete</Link>
               </div>
             </div>
           </div>
