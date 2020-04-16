@@ -28,7 +28,6 @@ class HeroDetail extends Component {
         this.setState({ hero: this.props.location.state })
     }
 
-<<<<<<< HEAD
   render() {
     const { hero } = this.state
     return (
@@ -52,35 +51,5 @@ class HeroDetail extends Component {
         : <> </>
     )
   }
-=======
-    render() {
-        const { hero } = this.state
-        return (
-            hero ? 
-            <Layout user={this.props.user}>
-                <div className="product-detail">
-                    {/* <img className="product-detail-image" src={hero.img} alt={hero.name} /> */}
-                    <div className="detail">
-                        <div className="name">{hero.name}</div>
-                        <div className="price">{hero.spec}</div>
-                        <div className="description">{hero.race}</div>
-                        <div className="description">{hero.description}</div>
-                        <div className="price">{hero.weapon}</div>
-                        <div className="button-container">
-                        <button className="edit-button">
-                            <Link className="edit-link" to={`/heroes/${hero._id}/edit`}>Edit</Link>
-                        </button>
-                            <button className="delete-button">
-                                <Link onClick={() => deleteHero(hero._id)} to="/heroes">Delete</Link>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </Layout>
-            : <> </>
-        )
-    }
->>>>>>> bb0564b717248131afed3b3f12cbc45147aaeeab
 }
-
 export default HeroDetail
