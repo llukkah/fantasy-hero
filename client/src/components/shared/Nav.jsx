@@ -26,7 +26,7 @@ const Nav = ({ user }) => {
         return (
             <nav>
                 <div className="nav">
-                    <NavLink className="logo" to="/">HERO[ID]</NavLink>
+                    <NavLink className="logo" to="/home">HERO[ID]</NavLink>
                     <div className="links">
                         {user && <div className="link welcome">Welcome, {user.email}</div>}
                         {alwaysOptions}

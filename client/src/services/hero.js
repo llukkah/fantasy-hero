@@ -18,6 +18,15 @@ export const getHero = async id => {
   }
 }
 
+export const displayAHero = async () => {
+  try {
+    const response = await api.get('/home')
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
+
 export const getSpecialty = async () => {
   try {
     const response = await api.get('/create-hero')
