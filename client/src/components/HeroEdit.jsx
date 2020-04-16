@@ -62,62 +62,57 @@ class HeroEdit extends Component {
       <Layout user={this.props.user}>
         <div className="product-edit">
           <div className="image-container">
-            {/* <img className="edit-product-image" src={hero.img} alt={hero.name} /> */}
-            <form onSubmit={this.handleSubmit}>
-            </form>
+            <img className="edit-product-image" src={hero.img} alt={hero.name} />
           </div>
-          {/* <div className="stackDiv"> */}
           <form className="edit-form" onSubmit={this.handleSubmit}>
             <input
               className="input-name"
               placeholder='Name'
+              id="name"
               value={hero.name}
               name='name'
               required
               autoFocus
               onChange={this.handleChange}
             />
-            <input
-              className="input-price"
+            <label className="label">Description:</label>
+            <textarea
+              className="textarea-description"
               placeholder='Enter a description'
+              rows="10"
+              id="description"
               value={hero.description}
               name='description'
               required
               onChange={this.handleChange}
             />
-
-
             <select
               name="race"
               onChange={this.handleChange}
               className="race-select">
               <option>Select Race</option>
               <option value='human'>Human</option>
-              <option value='orc'>orc</option>
+              <option value='orc'>Orc</option>
               <option value='elf'>Elf</option>
               <option value='dwarf'>Dwarf</option>
               <option value='goblin'>Goblin</option>
               <option value='troll'>Troll</option>
             </select>
-            {/* <input
-              className="input-price"
-              placeholder='Race'
-              value={hero.race} // come back to this
-              name='race'
-              required
-              onChange={this.handleChange}
-            /> */}
+            <label className="label" >Weapon:</label>
             <input
               className="input-price"
               placeholder='Weapon'
+              id="weapon"
               value={hero.weapon} // come back to this
               name='weapon'
               required
               onChange={this.handleChange}
             />
+            <label className="label">Image Link:</label>
             <input
               className="edit-input-image-link"
               placeholder='Image Link'
+              id="img"
               value={hero.img}
               name='img'
               required

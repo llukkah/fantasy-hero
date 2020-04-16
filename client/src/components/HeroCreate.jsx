@@ -59,6 +59,7 @@ class HeroCreate extends Component {
     return (
       <Layout user={this.props.user}>
         <form className="create-form" onSubmit={this.handleSubmit}>
+          <h1 className="form-title">Create your own hero</h1>
           <input
             id="create-name"
             className="input-name"
@@ -69,8 +70,8 @@ class HeroCreate extends Component {
             autoFocus
             onChange={this.handleChange}
           />
-          <select name="specialty" onChange={this.handleChange} className="input-price">
-            <option>SELECT A CLASS</option>
+          <select name="specialty" onChange={this.handleChange} className="input-specialty">
+            <option>Select Class</option>
             <option value={this.state.list[0]}>Healer</option>
             <option value={this.state.list[1]}>Hunter</option>
             <option value={this.state.list[2]}>Mage</option>
