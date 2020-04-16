@@ -75,7 +75,7 @@ class HeroEdit extends Component {
               autoFocus
               onChange={this.handleChange}
             />
-            <label for="description">Description:</label>
+            <label className="label">Description:</label>
             <textarea
               className="textarea-description"
               placeholder='Enter a description'
@@ -98,7 +98,7 @@ class HeroEdit extends Component {
               <option value='goblin'>Goblin</option>
               <option value='troll'>Troll</option>
             </select>
-            <label className="label" for="weapon">Weapon:</label>
+            <label className="label" >Weapon:</label>
             <input
               className="input-price"
               placeholder='Weapon'
@@ -108,7 +108,7 @@ class HeroEdit extends Component {
               required
               onChange={this.handleChange}
             />
-            <label className="label" for="img">Image Link:</label>
+            <label className="label">Image Link:</label>
             <input
               className="edit-input-image-link"
               placeholder='Image Link'
