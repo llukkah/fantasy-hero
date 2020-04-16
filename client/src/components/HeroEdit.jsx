@@ -49,66 +49,6 @@ class HeroEdit extends Component {
 
     const { hero, updated } = this.state
 
-    if (updated) {
-      return <Redirect to={`/heroes/${this.props.match.params.id}`} />
-      return (
-        <Layout user={this.props.user}>
-          <div className="product-edit">
-            <div className="image-container">
-              {/* <img className="edit-product-image" src={hero.img} alt={hero.name} /> */}
-              <form onSubmit={this.handleSubmit}>
-                <input
-                  className="edit-input-image-link"
-                  placeholder='Image Link'
-                  value={hero.img}
-                  name='imgURL'
-                  required
-                  onChange={this.handleChange}
-                />
-              </form>
-            </div>
-            {/* <div className="stackDiv"> */}
-            <form className="edit-form" onSubmit={this.handleSubmit}>
-              <input
-                className="input-name"
-                placeholder='Name'
-                value={hero.name}
-                name='name'
-                required
-                autoFocus
-                onChange={this.handleChange}
-              />
-              <input
-                className="input-price"
-                placeholder='Specialty'
-                value={hero.specialty} // come back to this
-                name='specialty'
-                required
-                onChange={this.handleChange}
-              />
-              <input
-                className="input-price"
-                placeholder='Race'
-                value={hero.race} // come back to this
-                name='race'
-                required
-                onChange={this.handleChange}
-              />
-              <input
-                className="input-price"
-                placeholder='Weapon'
-                value={hero.weapon} // come back to this
-                name='weapon'
-                required
-                onChange={this.handleChange}
-              />
-              <button type='submit' className="save-button">Save</button>
-            </form>
-            {/* </div> */}
-          </div>
-        </Layout>
-      )
-    }
 
     return (
       <Layout user={this.props.user}>
