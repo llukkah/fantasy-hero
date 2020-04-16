@@ -50,7 +50,37 @@ class SignIn extends Component {
       {this.state.errorMsg}</button> : <button type="submit">Sign In</button>
 
 
+
+        signIn(this.state)
+            .then(res => {
+                setUser(res.user)
+            })
+            .then(() => history.push('/home'))
+            .catch(error => {
+                console.error(error)
+                this.setState({
+                    isError: true,
+                    errorMsg: 'Invalid Credentials',
+                    username: '',
+                    password: ''
+                })
+            })
+    }
+
+    renderError = () => {
+        const toggleForm = this.state.isError ? 'danger' : ''
+        if (this.state.isError) {
+            return (
+                <button type="submit" className={toggleForm}>
+                    {this.state.errorMsg}
+                </button>
+            )
+        } else {
+            return <button type="submit">Sign In</button>
+        }
+    }
   }
+
 
   render() {
     const { username, password } = this.state

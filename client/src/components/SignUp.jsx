@@ -31,7 +31,7 @@ class SignUp extends Component {
         signUp(this.state)
             .then(() => signIn(this.state))
             .then(res => setUser(res.user))
-            .then(() => history.push('/'))
+            .then(() => history.push('/home'))
             .catch(error => {
                 console.error(error)
                 this.setState({
