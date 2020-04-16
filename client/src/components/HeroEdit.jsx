@@ -80,6 +80,7 @@ class HeroEdit extends Component {
                             />
                         </form>
                     </div>
+                    {/* <div className="stackDiv"> */}
                     <form className="edit-form" onSubmit={this.handleSubmit}>
                         <input
                             className="input-name"
@@ -116,6 +117,7 @@ class HeroEdit extends Component {
                         />
                         <button type='submit' className="save-button">Save</button>
                     </form>
+                    {/* </div> */}
                 </div>
             </Layout>
         )

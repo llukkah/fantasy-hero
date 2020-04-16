@@ -71,7 +71,6 @@ class HeroCreate extends Component {
                         <option value={this.state.list[1]}>Mage</option>
                         <option value={this.state.list[2]}>Healer</option>
                         <option value={this.state.list[3]}>Rogue</option>
-                        <option value={this.state.list[4]}>Warrior</option>
                     </select>
                     <textarea
                         className="textarea-description"
