@@ -31,7 +31,7 @@ class Home extends Component {
           <div className="aboutHero">
             <h5>{hero.display.name}</h5>
             <h5>{hero.display.race}</h5>
-            {/* <h5>{hero.display.descripition}</h5> */}
+            <h5>{hero.display.description}</h5>
           </div>
         </div>
       </Layout>

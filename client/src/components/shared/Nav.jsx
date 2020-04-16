@@ -28,7 +28,7 @@ const Nav = ({ user }) => {
                 <div className="nav">
                     <NavLink className="logo" to="/home">HERO[ID]</NavLink>
                     <div className="links">
-                        {user && <div className="link welcome">Welcome, {user.email}</div>}
+                        {/* {user && <div className="link welcome">Welcome, {user.email}</div>} */}
                         {alwaysOptions}
                         {user ? authenticatedOptions : unauthenticatedOptions}
                     </div>
