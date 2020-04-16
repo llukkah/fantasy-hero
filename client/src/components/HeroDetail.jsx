@@ -51,5 +51,4 @@ class HeroDetail extends Component {
     }
 }
 
-// ...thisisaTest
 export default HeroDetail
