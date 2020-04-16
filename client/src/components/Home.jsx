@@ -29,10 +29,10 @@ class Home extends Component {
         <div className="home">
           <h1 className="meet">MEET THE HERO:</h1>
           <div className="aboutHero">
-            <p style={{color: "#9CABA6"}}>{hero.display.name.toUpperCase()}<span style={{color: "white"}}> a</span></p>
-            <p style={{color: "#9CABA6"}}>{hero.display.race}<span style={{color: "white"}}> that carry a</span></p>
-            <p style={{color: "#9CABA6"}}>{hero.display.weapon}<span style={{color: "white"}}> who is</span></p>
-            <p className="descripition">{hero.display.description}</p>
+            <p className="about-hero" style={{color: "#9CABA6"}}>{hero.display.name.toUpperCase()}<span className="inner" style={{color: "white"}}> a(n)</span></p>
+            <p className="about-hero"style={{color: "#9CABA6"}}>{hero.display.race}<span className="inner" style={{color: "white"}}> that carry(ies) a(n)</span></p>
+            <p className="about-hero"style={{color: "#9CABA6"}}>{hero.display.weapon}<span className="inner" style={{color: "white"}}> who is</span></p>
+            <p className="desc">{hero.display.description}</p>
           </div>
         </div>
       </Layout>
