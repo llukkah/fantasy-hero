@@ -77,9 +77,9 @@ class HeroCreate extends Component {
                     <textarea
                         className="textarea-description"
                         rows={10}
-                        placeholder='Enter a race'
-                        value={hero.race}
-                        name='race'
+                        placeholder='Enter a description'
+                        value={hero.description}
+                        name='description'
                         required
                         onChange={this.handleChange}
                     />
@@ -88,6 +88,14 @@ class HeroCreate extends Component {
                         placeholder='Weapon'
                         value={hero.weapon}
                         name='weapon'
+                        required
+                        onChange={this.handleChange}
+                    />
+                    <input
+                        className="input-image-link"
+                        placeholder='Enter a Race'
+                        value={hero.race}
+                        name='race'
                         required
                         onChange={this.handleChange}
                     />
