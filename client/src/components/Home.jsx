@@ -27,11 +27,12 @@ class Home extends Component {
       this.state.hero ?
       <Layout user={this.props.user}>
         <div className="home">
-          <h1 className="meet">Meet Our Heros:</h1>
+          <h1 className="meet">MEET THE HERO:</h1>
           <div className="aboutHero">
-            <h5>{hero.display.name} is a</h5>
-            <h5>{hero.display.race}</h5>
-            <h5>{hero.display.description}</h5>
+            <p style={{color: "#9CABA6"}}>{hero.display.name.toUpperCase()}<span style={{color: "white"}}> a</span></p>
+            <p style={{color: "#9CABA6"}}>{hero.display.race}<span style={{color: "white"}}> that carry a</span></p>
+            <p style={{color: "#9CABA6"}}>{hero.display.weapon}<span style={{color: "white"}}> who is</span></p>
+            <p className="descripition">{hero.display.description}</p>
           </div>
         </div>
       </Layout>
