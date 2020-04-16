@@ -67,10 +67,12 @@ class HeroCreate extends Component {
                         onChange={this.handleChange}
                     />
               <select name="specialty" onChange={this.handleChange} className="input-price">
+                        <option>SELECT A CLASS</option>
                         <option value={this.state.list[0]}>Hunter</option>
                         <option value={this.state.list[1]}>Mage</option>
                         <option value={this.state.list[2]}>Healer</option>
                         <option value={this.state.list[3]}>Rogue</option>
+                        <option value={this.state.list[4]}>Warrior</option>
                     </select>
                     <textarea
                         className="textarea-description"
