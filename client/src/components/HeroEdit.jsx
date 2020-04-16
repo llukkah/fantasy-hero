@@ -17,6 +17,7 @@ class HeroEdit extends Component {
             atk: 50,
             weapon: '',
             img: '',
+            description: ''
         },
             updated: false
         }
@@ -70,14 +71,6 @@ class HeroEdit extends Component {
                     <div className="image-container">
                         {/* <img className="edit-product-image" src={hero.img} alt={hero.name} /> */}
                         <form onSubmit={this.handleSubmit}>
-                            <input
-                                className="edit-input-image-link"
-                                placeholder='Image Link'
-                                value={hero.img}
-                                name='imgURL'
-                                required
-                                onChange={this.handleChange}
-                            />
                         </form>
                     </div>
                     {/* <div className="stackDiv"> */}
@@ -112,6 +105,14 @@ class HeroEdit extends Component {
                             placeholder='Weapon'
                             value={hero.weapon} // come back to this
                             name='weapon'
+                            required
+                            onChange={this.handleChange}
+                        />
+                        <input
+                            className="edit-input-image-link"
+                            placeholder='Image Link'
+                            value={hero.img}
+                            name='img'
                             required
                             onChange={this.handleChange}
                         />
