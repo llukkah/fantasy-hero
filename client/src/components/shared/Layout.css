@@ -5,8 +5,11 @@
 }
 
 .layout-children {
+    display: flex;
     flex: 2;
     padding: 100px;
+    align-items: center; 
+    justify-content: center;
 }
 
 @media (max-width: 500px) {

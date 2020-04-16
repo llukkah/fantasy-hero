@@ -29,7 +29,7 @@ class Home extends Component {
         <div className="home">
           <h1 className="meet">Meet Our Heros:</h1>
           <div className="aboutHero">
-            <h5>{hero.display.name}</h5>
+            <h5>{hero.display.name} is a</h5>
             <h5>{hero.display.race}</h5>
             <h5>{hero.display.description}</h5>
           </div>
