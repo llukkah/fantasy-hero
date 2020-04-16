@@ -48,62 +48,58 @@ class HeroCreate extends Component {
     this.setState({ created })
   }
 
-  render() {
-    const { hero, created } = this.state
-
-    if (created) {
-      return <Redirect to={`/heroes`} />
+  if(created) {
+    return <Redirect to={`/heroes`} />
+  }
+  return(
+            <Layout user = { this.props.user } >
+      <form className="create-form" onSubmit={this.handleSubmit}>
+        <input
+          className="input-name"
+          placeholder='Name'
+          value={hero.name}
+          name='name'
+          required
+          autoFocus
+          onChange={this.handleChange}
+        />
+        <select name="specialty" onChange={this.handleChange} className="input-price">
+          <option value={this.state.list[0]}>Hunter</option>
+          <option value={this.state.list[1]}>Mage</option>
+          <option value={this.state.list[2]}>Healer</option>
+          <option value={this.state.list[3]}>Rogue</option>
+          <option value={this.state.list[4]}>Warrior</option>
+        </select>
+        <textarea
+          className="textarea-description"
+          rows={10}
+          placeholder='Enter a race'
+          value={hero.race}
+          name='race'
+          required
+          onChange={this.handleChange}
+        />
+        <input
+          className="input-image-link"
+          placeholder='Weapon'
+          value={hero.weapon}
+          name='weapon'
+          required
+          onChange={this.handleChange}
+        />
+        <input
+          className="input-image-link"
+          placeholder='Image Link'
+          value={hero.img}
+          name='img'
+          required
+          onChange={this.handleChange}
+        />
+        <button type='submit' className="submit-button">Submit</button>
+      </form>
+            </Layout>
+        )
     }
-    return (
-      <Layout user={this.props.user}>
-        <form className="create-form" onSubmit={this.handleSubmit}>
-          <input
-            className="input-name"
-            placeholder='Name'
-            value={hero.name}
-            name='name'
-            required
-            autoFocus
-            onChange={this.handleChange}
-          />
-          <input
-            className="input-price"
-            placeholder='Specialty'
-            value={hero.specialty} // change this to a dropdown
-            name='specialty'
-            required
-            onChange={this.handleChange}
-          />
-          <textarea
-            className="textarea-description"
-            rows={10}
-            placeholder='Enter a race'
-            value={hero.race}
-            name='race'
-            required
-            onChange={this.handleChange}
-          />
-          <input
-            className="input-image-link"
-            placeholder='Weapon'
-            value={hero.weapon}
-            name='weapon'
-            required
-            onChange={this.handleChange}
-          />
-          <input
-            className="input-image-link"
-            placeholder='Image Link'
-            value={hero.img}
-            name='img'
-            required
-            onChange={this.handleChange}
-          />
-          <button type='submit' className="submit-button">Submit</button>
-        </form>
-      </Layout>
-    )
-
   }
 }
 
