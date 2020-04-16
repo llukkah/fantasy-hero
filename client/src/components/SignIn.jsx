@@ -32,7 +32,7 @@ class SignIn extends Component {
             .then(res => {
                 setUser(res.user)
             })
-            .then(() => history.push('/home'))
+            .then(() => history.push('/'))
             .catch(error => {
                 console.error(error)
                 this.setState({
@@ -45,17 +45,13 @@ class SignIn extends Component {
     }
 
     renderError = () => {
-        const toggleForm = this.state.isError ? 'danger' : ''
-        if (this.state.isError) {
-            return (
-                <button type="submit" className={toggleForm}>
-                    {this.state.errorMsg}
-                </button>
-            )
-        } else {
-            return <button type="submit">Sign In</button>
-        }
+        const toggleForm = this.state.isError ? 'danger' : '';
+        return this.state.isError ? <button type="submit" className={toggleForm}>
+        {this.state.errorMsg}</button> : <button type="submit">Sign In</button>
     }
+
+
+
 
     render() {
         const { username, password } = this.state
