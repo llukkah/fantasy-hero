@@ -75,34 +75,52 @@ const changePassword = async (req, res) => { }
 
 const getHeroes = async (req, res) => {
     try {
-      const heros = await Hero.find()
-      const id = heros.map(hero => hero.specialty)
-      // console.log(id)
-      let result = []
-      let name = []
-      for (let i = 0; i < id.length; i++){
-        result.push(await Specialty.findById(id[i]))
-      }
-      for (let i = 0; i < result.length; i++){
-        name.push(result[i].name)
-      }
-      let heroCopy = [...heros]
-      // console.log(heroCopy)
-      for (let i = 0; i < heros.length; i++) {
-        heros[i].spec = name[i]
-        // console.log(heros[i].spec)
-      }
-      // console.log(heros)
-      // console.log(name)
-      // console.log(heros)
-      if (name) {
-        return res.json({
-          hero: heros,
-          names: name
-        })
-      }
+        const heros = await Hero.find()
+        const id = heros.map(hero => hero.specialty)
+        // console.log(id)
+        let result = []
+        let name = []
+        for (let i = 0; i < id.length; i++) {
+            result.push(await Specialty.findById(id[i]))
+        }
+        for (let i = 0; i < result.length; i++) {
+            name.push(result[i].name)
+        }
+        let heroCopy = [...heros]
+        // console.log(heroCopy)
+        for (let i = 0; i < heros.length; i++) {
+            heros[i].spec = name[i]
+            // console.log(heros[i].spec)
+        }
+        // console.log(heros)
+        // console.log(name)
+        // console.log(heros)
+        if (name) {
+            return res.json({
+                hero: heros,
+                names: name
+            })
+        }
     } catch (error) {
         res.status(500).json({ error: error.message })
+    }
+}
+
+const displayAHero = async (req, res) => {
+    try {
+        let display = '';
+        const hero = await Hero.find();
+        for(let i = 0; i < hero.length; i++) {
+            display = hero[Math.floor(Math.random() * hero.length)]
+        }
+        // console.log(display)
+        // console.log(hero.length);
+        if (display) {
+            return res.json({display})
+        }
+    } catch (error) {
+        res.status(500).json({ error: error.message })
+
     }
 }
 
@@ -126,10 +144,10 @@ const getSpecialty = async (req, res) => {
         let specIds = [];
         specialty.forEach(ele => specIds.push(ele._id))
         // console.log(specIds)
-        if(specialty) {
+        if (specialty) {
             return res.json(specIds)
         }
-    } catch(e) {
+    } catch (e) {
         res.status(500).json({ error: error.message })
     }
 }
@@ -176,6 +194,7 @@ module.exports = {
     signIn,
     verifyUser,
     changePassword,
+    displayAHero,
     getSpecialty,
     createHero,
     getHeroes,
