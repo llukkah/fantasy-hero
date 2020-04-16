@@ -63,10 +63,10 @@ body {
     /* background-size: calc(100% - 2em) 5px, auto; */
     background-size: 100% 5px, auto;
   }
-/* 
+
 .edit-link {
     color: #C7CDC7;
-} */
+}
 
 @media (max-width: 1024px) {
     .name {
