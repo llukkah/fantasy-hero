@@ -11,7 +11,7 @@ const Hero = new Schema(
     weapon: { type: String, required: true },
     img: { type: String, required: true },
     spec: {type: String},
-    description: {types: String}
+    description: {type: String}
   },
   { timestamps: true }
 )
