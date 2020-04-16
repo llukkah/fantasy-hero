@@ -21,10 +21,6 @@ class HeroDetail extends Component {
     }
 
     async componentDidMount() {
-        // let { id } = this.props.match.params
-        // const hero = await getHero(id)
-        // this.setState({ hero })
-
         this.setState({ hero: this.props.location.state })
     }
 
@@ -36,11 +32,11 @@ class HeroDetail extends Component {
           <div className="hero-detail">
             {/* <img className="hero-img" src={hero.img} alt={hero.name} /> */}
             <div className="detail">
-              <div className="name">{hero.name}</div>
-              <div className="description">{hero.description}</div>
-              <div className="specialty"><span>Specialty:</span> {hero.spec}</div>
-              <div className="race"><span>Race:</span> {hero.race}</div>
-              <div className="weapon"><span>Weapon:</span> {hero.weapon}</div>
+              <div className="detail-name">{hero.name}</div>
+              <div className="detail-description">{hero.description}</div>
+              <div className="detail-specialty"><span className="detail-span">Specialty:</span> {hero.spec}</div>
+              <div className="detail-race"><span className="detail-span">Race:</span> {hero.race}</div>
+              <div className="detail-weapon"><span className="detail-span">Weapon:</span> {hero.weapon}</div>
               <div className="button-container">
                 <Link className="edit-link" to={`/heroes/${hero._id}/edit`}>Edit</Link>
                 <Link className="delete-link" onClick={() => deleteHero(hero._id)} to="/heroes">Delete</Link>
