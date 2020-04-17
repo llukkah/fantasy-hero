@@ -17,7 +17,7 @@ class Home extends Component {
     this.setState({
       hero: display
     })
-    console.log(this.state.hero)
+    // console.log(this.state.hero)
   }
 
   render() {
@@ -27,12 +27,12 @@ class Home extends Component {
       this.state.hero ?
       <Layout user={this.props.user}>
         <div className="home">
-          <h1 className="meet">MEET THE HERO:</h1>
+          <h1 className="meet">MEET THE <span className="headerHero" style={{color: "#9CABA6"}}>HERO:</span></h1>
           <div className="aboutHero">
-            <p className="about-hero" style={{color: "#9CABA6"}}>{hero.display.name.toUpperCase()}<span className="inner" style={{color: "white"}}> a(n)</span></p>
-            <p className="about-hero"style={{color: "#9CABA6"}}>{hero.display.race}<span className="inner" style={{color: "white"}}> that carry(ies) a(n)</span></p>
-            <p className="about-hero"style={{color: "#9CABA6"}}>{hero.display.weapon}<span className="inner" style={{color: "white"}}> who is</span></p>
-            <p className="desc">{hero.display.description}</p>
+            <p className="about-hero" style={{color: "#9CABA6"}}>{hero.display.name.toUpperCase()}<span className="inner" style={{color: "white"}}> is a(n)</span></p>
+            <p className="about-hero"style={{color: "#9CABA6"}}>{hero.display.race}<span className="inner" style={{color: "white"}}> who is </span></p>
+            <p className="desc">{hero.display.description}<span className="inner" style={{color: "white"}}>that carries a(n)</span></p>
+            <p className="about-hero"style={{color: "#9CABA6"}}>{hero.display.weapon}</p>
           </div>
         </div>
       </Layout>
