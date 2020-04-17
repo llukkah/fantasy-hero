@@ -94,6 +94,7 @@ class Heroes extends Component {
             value={this.state.selectValue}
             onChange={this.handleSortChange}
           >
+            <option className="ddefault">Sort By</option>
             <option className="option" value="name-ascending">
               &nbsp; Alphabetically, A-Z &nbsp;
             </option>
