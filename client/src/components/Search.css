@@ -1,9 +1,9 @@
 .search-form {
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-input {
@@ -16,5 +16,5 @@
 }
 
 .search-input::placeholder {
-    letter-spacing: .3px;
+  letter-spacing: .3px;
 }

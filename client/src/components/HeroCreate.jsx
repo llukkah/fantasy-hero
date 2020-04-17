@@ -78,8 +78,6 @@ class HeroCreate extends Component {
             <option value={this.state.list[4]}>Rogue</option>
           </select>
 
-
-
           <select
             name="race"
             onChange={this.handleChange}
