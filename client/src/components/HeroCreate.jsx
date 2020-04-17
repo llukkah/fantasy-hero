@@ -95,7 +95,8 @@ class HeroCreate extends Component {
           <input
             className="create-textarea-description create-input-focus"
             rows={10}
-            placeholder='Enter a description'
+            maxLength="50"
+            placeholder='Enter a description: Max 50 Characters'
             value={hero.description}
             name='description'
             required
