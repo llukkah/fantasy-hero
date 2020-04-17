@@ -71,9 +71,9 @@ class HeroCreate extends Component {
           />
           <select name="specialty" onChange={this.handleChange} className="create-input-specialty create-input-focus">
             <option>Select Class</option>
-            <option value={this.state.list[0]}>Healer</option>
+            <option value={this.state.list[0]}>Mage</option>
             <option value={this.state.list[1]}>Hunter</option>
-            <option value={this.state.list[2]}>Mage</option>
+            <option value={this.state.list[2]}>Healer</option>
             <option value={this.state.list[3]}>Warrior</option>
             <option value={this.state.list[4]}>Rogue</option>
           </select>
@@ -84,7 +84,7 @@ class HeroCreate extends Component {
             className="create-race-select create-input-focus">
             <option>Select Race</option>
             <option value='human'>Human</option>
-            <option value='orc'>orc</option>
+            <option value='orc'>Orc</option>
             <option value='elf'>Elf</option>
             <option value='dwarf'>Dwarf</option>
             <option value='goblin'>Goblin</option>

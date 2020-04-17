@@ -6,7 +6,7 @@ const jsonWebToken = localStorage.getItem('token') || null
 let apiUrl
 
 const apiUrls = {
-    production: 'https://hero-id.herokuapp.com/api',
+    production: 'https://heroid.herokuapp.com/api',
     development: 'http://localhost:3000/api/'
 }
 
