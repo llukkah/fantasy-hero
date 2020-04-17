@@ -1,14 +1,14 @@
 .search-form {
-    padding-top: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-input {
     width: 50vw;
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: 0.1px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -17,5 +17,5 @@
 }
 
 .search-input::placeholder {
-    letter-spacing: .3px;
+  letter-spacing: .3px;
 }
