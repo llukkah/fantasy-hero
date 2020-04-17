@@ -53,16 +53,6 @@ class Heroes extends Component {
           products: ZA(heroes),
         });
         break;
-      case "price-ascending":
-        this.setState({
-          products: lowestFirst(heroes),
-        });
-        break;
-      case "price-descending":
-        this.setState({
-          products: highestFirst(heroes),
-        });
-        break;
       default:
         break;
     }
@@ -95,6 +85,7 @@ class Heroes extends Component {
           onSubmit={this.handleSubmit}
           value={this.state.filterValue}
           onChange={this.handleSearchChange}
+          className="hero-search"
         />
         <form className="sort-container" onSubmit={this.handleSubmit}>
           <label htmlFor="sort">SORT BY:</label>
@@ -108,12 +99,6 @@ class Heroes extends Component {
             </option>
             <option value="name-descending">
               &nbsp; Alphabetically, Z-A &nbsp;
-            </option>
-            <option value="price-ascending">
-              &nbsp; Price, low to high &nbsp;
-            </option>
-            <option value="price-descending">
-              &nbsp; Price, high to low &nbsp;
             </option>
           </select>
         </form>
