@@ -33,7 +33,7 @@ div.aboutHero {
 }
 
 .inner {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .aboutHero {
@@ -41,16 +41,20 @@ div.aboutHero {
   font-weight: 100;
   font-size: 2rem;
   letter-spacing: 2px;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 body.home {
   background-color: black;
 }
 
-p.desc {
+p.desc,
+p.about-hero {
   font-size: 1.5rem;
+  padding: 10px;
 }
+
+
 
 @media (max-width: 500px) {
   .home {
