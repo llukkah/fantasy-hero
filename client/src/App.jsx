@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { verifyUser } from './services/user'
+import Splash from './components/Splash'
 import Home from './components/Home'
 import SignUp from './components/SignUp'
 import SignIn from './components/SignIn'
@@ -36,6 +37,7 @@ class App extends Component {
     return (
       <div className="app">
         <Switch>
+          <Route exact path="/" render={() => <Splash user={user} />} />
           <Route exact path="/home" render={() => <Home user={user} />} />
           <Route exact path="/sign-up" render={props => <SignUp setUser={setUser} history={props.history} />} />
           <Route exact path="/sign-in" render={props => <SignIn setUser={setUser} history={props.history} />} />
