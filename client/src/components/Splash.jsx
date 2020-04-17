@@ -19,7 +19,7 @@ class Splash extends Component {
       <div className="splash">
         <h1 className="splash-text">HERO[ID]</h1>
         <button className="splash-but" onClick={redirect}>ENTER</button>
-      </div> 
+        </div> 
       </div>
     );
   }

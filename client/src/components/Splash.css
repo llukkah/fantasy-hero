@@ -7,19 +7,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top:-35%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
 }
 
 .splashImage {
   background-image: url("https://i.pinimg.com/originals/24/0e/7f/240e7f147e24826d3e151acfa72309a8.gif");
   opacity: .2;
-  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   width: 100vw;
-  background-position: center;
-  box-shadow: 0 0 8px 8px black inset;
+  text-align: center;
 }
-
 
 .splash-text{
   font-size: 4em;
@@ -34,7 +36,6 @@
   transition-duration: 0.5s;
 }
 .splash-but:hover{
-  margin-top:15%;
   background-color: white;
   color:black;
 }

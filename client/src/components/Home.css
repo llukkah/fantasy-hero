@@ -5,14 +5,6 @@
     padding: 0px;
 }
 
-div.bigHome {
-    background-image: url("https://media.giphy.com/media/6s8FsduJbwuYVQQ5V3/giphy.gif");
-    opacity: .8;
-    background-repeat: no-repeat;
-    height: 50vh;
-    width: 100%;
-    
-}
 
 div.home {
     display: flex;
