@@ -75,11 +75,12 @@ class HeroEdit extends Component {
               autoFocus
               onChange={this.handleChange}
             />
-            <label className="label">Description:</label>
+            <label className="label">Description: Max 50 Characters</label>
             <textarea
               className="textarea-description"
               placeholder='Enter a description'
               rows="10"
+              maxLength="50"
               id="description"
               value={hero.description}
               name='description'

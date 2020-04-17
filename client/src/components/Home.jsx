@@ -31,7 +31,7 @@ class Home extends Component {
           <div className="aboutHero">
             <p className="about-hero" style={{color: "#9CABA6"}}>{hero.display.name.toUpperCase()}<span className="inner" style={{color: "white"}}> is a(n)</span></p>
             <p className="about-hero"style={{color: "#9CABA6"}}>{hero.display.race}<span className="inner" style={{color: "white"}}> who is </span></p>
-            <p className="desc">{hero.display.description}<span className="inner" style={{color: "white"}}>that carries a(n)</span></p>
+            <p className="desc">{hero.display.description}<span className="inner" style={{color: "white"}}> that carries a(n)</span></p>
             <p className="about-hero"style={{color: "#9CABA6"}}>{hero.display.weapon}</p>
           </div>
         </div>
