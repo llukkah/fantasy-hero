@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './ProductCreate.css'
+import './HeroCreate.css'
 import Layout from './shared/Layout'
 import { Redirect } from 'react-router-dom'
 import { getSpecialty, createHero } from '../services/hero'

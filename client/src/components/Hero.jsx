@@ -1,5 +1,5 @@
 import React from 'react';
-import './Product.css';
+import './Hero.css';
 import { Link } from 'react-router-dom'
 
 const Hero = (props) => {

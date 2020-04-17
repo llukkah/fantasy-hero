@@ -6,8 +6,8 @@ console.log("JWT: ", jsonWebToken)
 let apiUrl
 
 const apiUrls = {
-    production: 'https://sei-products-api.herokuapp.com/api',
-    development: 'http://localhost:3000/api'
+    production: 'https://hero-id.herokuapp.com/api',
+    development: 'http://localhost:3000/api/'
 }
 
 if (window.location.hostname === 'localhost') {

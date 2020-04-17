@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './ProductEdit.css'
+import './HeroEdit.css'
 import { Redirect } from 'react-router-dom'
 import Layout from './shared/Layout'
 import { getHero, updateHero } from '../services/hero'

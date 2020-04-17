@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Products.css";
+import "./Heros.css";
 import Hero from "./Hero";
 import Search from "./Search";
 import { AZ, ZA, lowestFirst, highestFirst } from "./Sort";
