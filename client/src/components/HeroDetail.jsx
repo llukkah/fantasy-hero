@@ -30,7 +30,7 @@ class HeroDetail extends Component {
       hero ?
         <Layout user={this.props.user}>
           <div className="hero-detail">
-            {/* <div><img className="hero-img" src={hero.img} alt={hero.name} />}</div> */}
+            <div><img className="hero-img" src= {hero.img} alt={hero.name} /></div>
             <div className="detail">
               <div className="detail-name">{hero.name}</div>
               <div className="detail-description">{hero.description}</div>
