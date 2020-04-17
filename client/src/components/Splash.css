@@ -7,18 +7,30 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top:15%;
+  margin-top:-35%;
 }
+
+.splashImage {
+  background-image: url("https://i.pinimg.com/originals/24/0e/7f/240e7f147e24826d3e151acfa72309a8.gif");
+  opacity: .2;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  box-shadow: 0 0 8px 8px black inset;
+}
+
+
 .splash-text{
   font-size: 4em;
 }
 
 .splash-but{
-  margin-top:15%;
+  margin-top: 20px;
   background-color: transparent;
   color:white;
   border:1px solid white;
-  padding:5% 10% 5% 10%;
+  padding:20px 40px 20px 40px;
   transition-duration: 0.5s;
 }
 .splash-but:hover{
