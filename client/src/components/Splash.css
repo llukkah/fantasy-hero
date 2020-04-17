@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Manrope|Open+Sans|Raleway&display=swap');
+
+.splash{
+  color:white;
+  font-family: 'Raleway', sans-serif;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top:15%;
+}
+.splash-text{
+  font-size: 4em;
+}
+
+.splash-but{
+  margin-top:15%;
+  background-color: transparent;
+  color:white;
+  border:1px solid white;
+  padding:5% 10% 5% 10%;
+  transition-duration: 0.5s;
+}
+.splash-but:hover{
+  margin-top:15%;
+  background-color: white;
+  color:black;
+}
