@@ -44,6 +44,7 @@ form.edit-form {
     font-size: 20px;
     font-family: 'Manrope',sans-serif;
     background:transparent;
+    border:0;
     border-bottom: 2px solid white;
     outline:0;
     color:white;
@@ -59,6 +60,7 @@ form.edit-form {
     font-size: 64px;
     letter-spacing: 1px;
     background: transparent;
+    border:0;
     border-bottom: 2px solid white;
     outline:0;
     color:white;
@@ -80,6 +82,7 @@ form.edit-form {
     background:transparent;
     outline:0;
     color:white;
+    border:0;
     border-bottom:2px solid white;
 }
 

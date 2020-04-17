@@ -5,7 +5,9 @@
     justify-content: space-evenly;
     padding: 40px;
 }
-
+.hero-search{
+  width:10%;
+}
 .sort-container {
     display: flex;
     width: 83.5vw;
