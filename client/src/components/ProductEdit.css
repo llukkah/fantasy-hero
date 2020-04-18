@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Manrope|Raleway&display=swap');
+.product-edit {
+    display: flex;
+    padding: 100px;
+    padding-top: 80px;
+    font-family: 'Manrope',sans-serif;
+
+}
+
+
+/* HeroEdit left side */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right:5%;
+}
+
+/* HeroEdit rightside */
+form.edit-form {
+    display: flex;
+    flex-flow: column nowrap;
+    padding:0;
+}
+
+.label{
+  margin-top:5%;
+  color:white;
+}
+
+.edit-product-image {
+    width: 100%;
+    height:50%;
+    padding: 0 40px;
+    padding-bottom: 5px;
+    border-radius: 50%;
+    margin-top:15%;
+}
+
+.edit-input-image-link {
+    width: 100%;
+    height:10%;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Manrope',sans-serif;
+    background:transparent;
+    border:0;
+    border-bottom: 2px solid white;
+    outline:0;
+    color:white;
+}
+
+.edit-form {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+}
+
+.input-name {
+    font-family: 'Manrope',sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    background: transparent;
+    border:0;
+    border-bottom: 2px solid white;
+    outline:0;
+    color:white;
+}
+.race-select{
+  padding-top: 5%;
+  margin-top: 5%;
+  width:100%;
+  height:10%;
+  text-align: center;
+  background: transparent;
+  border:2px solid white;
+  color:white;
+}
+.input-price {
+    font-family: 'Manrope',sans-serif;
+    font-size: 2em;
+    letter-spacing: 1px;
+    background:transparent;
+    outline:0;
+    color:white;
+    border:0;
+    border-bottom:2px solid white;
+}
+
+.textarea-description {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    letter-spacing: .9px;
+    line-height: 1.6;
+    width:97%;
+    background:transparent;
+    border:2px solid white;
+    color:white;
+    resize: none;
+}
+
+.save-button {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 10%;
+    width: 20%;
+    margin-top: 40px;
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 10px 2px #CECECE;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+}
+
+.save-button:hover {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 10%;
+    width: 20%;
+    margin-top: 40px;
+    background-color: white;
+    color: black;
+    border: none;
+    box-shadow: 2px 2px 10px 2px #CECECE;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+@media (max-width: 580px) {
+    .input-name {
+        margin-left: -10px;
+        padding-left: -10px;
+        font-size: 26px;
+    }
+    .edit-form {
+        padding: 0px;
+    }
+    .textarea-description {
+        width: 100%;
+        padding: 0px;
+    }
+    .product-edit {
+        width: 100%;
+        flex-direction: column;
+    }
+    .image-container {
+        width: 100%;
+        padding-bottom:20%;
+    }
+    .label {
+      margin-top:10%;
+    }
+    form.edit-form {
+      display: flex;
+      flex-flow: column nowrap;
+      padding:10%;
+      align-items: center;
+      justify-content: center;
+  }
+  .save-button {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 10%;
+    width: 40%;
+}
+.input-name {
+  font-family: 'Manrope',sans-serif;
+  font-size: 44px;
+  letter-spacing: 1px;
+  background: transparent;
+  border-bottom: 2px solid white;
+  outline:0;
+  color:white;
+  width: 100%;
+  text-align: center;
+}
+.race-select{
+padding-top: 5%;
+margin-top: 10%;
+width:100%;
+height:10%;
+text-align: center;
+background: transparent;
+color:white;
+}
+.input-price {
+  font-family: 'Manrope',sans-serif;
+  font-size: 2em;
+  outline:0;
+  width:100%;
+  text-align: center;
+  margin-top:10%
+}
+.edit-input-image-link {
+  width: 100%;
+  height:50%;
+  text-align: center;
+  font-size: 10px;
+  margin-top:20%;
+}
+.textarea-description {
+text-align: center;
+margin-top:10%;
+}
+.label{
+  display:none
+}
+}
