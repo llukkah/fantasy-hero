@@ -9,7 +9,7 @@ class HeroCreate extends Component {
     super(props)
     this.state = {
       hero: {
-        user_id: this.props.user.id,
+        user_id: this.props.user.id || this.props.user._id,
         name: '',
         specialty: null, 
         race: '',
