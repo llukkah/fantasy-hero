@@ -95,4 +95,36 @@ body {
     .edit-link, .delete-link {
         width: 40%;
     }
+    footer {
+        margin-top: 100px;
+    }
+    .links {
+        margin-left: 0px;
+    }
+    .link {
+        margin-left: 40px;
+    }
+    .logo {
+        margin-left: 35px;
+    }
+
+
+@media (max-width: 500px) {
+    footer {
+        margin-top: 600px;
+    }
+
+    .links {
+        margin-left: 0px;
+    }
+    .link {
+        margin-left: 100px;
+    }
+}
+@media (max-width: 400px) {
+    footer {
+        margin-top: 700px;
+    }
+
+}
 }
