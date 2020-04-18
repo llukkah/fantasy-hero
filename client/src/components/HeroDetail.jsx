@@ -9,6 +9,7 @@ class HeroDetail extends Component {
         super(props)
         this.state = {
           hero: {
+            user_id: '',
             _id:'',
             name: '',
             race: '',
@@ -37,10 +38,13 @@ class HeroDetail extends Component {
               <div className="detail-specialty"><span className="detail-span">Specialty:</span> {hero.spec}</div>
               <div className="detail-race"><span className="detail-span">Race:</span> {hero.race}</div>
               <div className="detail-weapon"><span className="detail-span">Weapon:</span> {hero.weapon}</div>
+              {this.props.user&& this.props.user.id === hero.user_id ? 
               <div className="button-container">
                 <Link className="edit-link" to={`/heroes/${hero._id}/edit`}>Edit</Link>
                 <Link className="delete-link" onClick={() => deleteHero(hero._id)} to="/heroes">Delete</Link>
               </div>
+              : <> </>
+              }
             </div>
           </div>
         </Layout>

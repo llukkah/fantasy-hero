@@ -9,6 +9,7 @@ class HeroEdit extends Component {
     super(props)
     this.state = {
       hero: {
+        user_id: this.props.user.id,
         _id: '',
         name: '',
         specialty: {}, //Come back to this

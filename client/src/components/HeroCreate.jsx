@@ -5,18 +5,19 @@ import { Redirect } from 'react-router-dom'
 import { getSpecialty, createHero } from '../services/hero'
 
 class HeroCreate extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       hero: {
+        user_id: this.props.user.id,
         name: '',
-        specialty: null, //Come back to this
+        specialty: null, 
         race: '',
         hp: 100,
         atk: 50,
         weapon: '',
         img: '',
-      },
+      }, 
       created: false,
       list: '',
     }
@@ -50,7 +51,6 @@ class HeroCreate extends Component {
 
   render() {
     const { hero, created } = this.state
-
 
     if (created) {
       return <Redirect to={`/heroes`} />

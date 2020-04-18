@@ -60,4 +60,22 @@ p.desc, p.about-hero {
     .home {
         padding: 100px 40px;
     }
+
+    h1.meet {
+        display: unset;
+        font-size: 25px;
+        letter-spacing: 0;
+    }
+
+    p.about-hero {
+        font-size: 20px;
+    }
+
+    p.desc {
+        font-size: 16px;
+    }
+    
+    span.inner {
+        font-size: 18px;
+    }
 }

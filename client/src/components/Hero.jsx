@@ -7,6 +7,7 @@ const Hero = (props) => {
         <>
         <Link className="product" to={{pathname: `/heroes/${props._id}`,
             state: {
+                user_id: props.user_id,
                 _id: props._id,
                 name: props.name,
                 race: props.race,
