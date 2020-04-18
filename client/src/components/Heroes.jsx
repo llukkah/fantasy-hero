@@ -68,6 +68,7 @@ class Heroes extends Component {
 
     const HEROES = heroes.map((hero, index) => (
       <Hero
+        user_id={hero.user_id}
         _id={hero._id}
         name={hero.name}
         img={hero.img}

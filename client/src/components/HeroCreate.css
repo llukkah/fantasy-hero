@@ -2,18 +2,16 @@
   text-align: center;
   text-transform: uppercase;
   font-size: 2.7em;
-  margin-top: 15px;
   margin-bottom: 20px;
   color: white;
 }
 
 .create-form {
-  padding-top: 50px;
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
   background-color: black;
   border: 2px white solid;
   padding: 10px;
@@ -75,8 +73,7 @@
   font-size: 1.6em;
   font-family: Arial, Helvetica, sans-serif;
   height: 40px;
-  width: 98%;
-  margin-left: 7px;
+  width: 100%;
   margin-top: 40px;
   padding: 10px;
   background-color: white;
@@ -88,16 +85,23 @@
 
 @media (max-width: 500px) {
   .create-form {
-    left: 20px;
-    position: relative;
-    top: 152px;
     height: 100%;
-    width: 95%;
-    overflow: visible;
+    width: 100%;
   }
-.create-form-title{
 
-}
+  .create-submit-button {}
+
+  .create-form-title {
+    font-size: 1.9em;
+  }
+
+  /* .create-form>select {} */
+
+  .create-form>input,
+  select {
+    margin-top: 10px;
+  }
+
   input,
   textarea {
     font-size: 28px;

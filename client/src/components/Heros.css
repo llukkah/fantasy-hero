@@ -1,9 +1,9 @@
 .products {
-    width: 90vw;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 40px;
+    padding:0;
 }
 .hero-search{
   width:10%;
