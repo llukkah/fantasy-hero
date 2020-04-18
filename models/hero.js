@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const Hero = new Schema(
   {
+    user_id: { type: Schema.Types.ObjectId, ref: 'user_id' , required: true },
     name: { type: String, required: true },
     specialty: { type: Schema.Types.ObjectId, ref: 'specialty_id' , required: true },
     race: { type: String, required: true },

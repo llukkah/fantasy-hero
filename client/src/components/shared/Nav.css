@@ -67,17 +67,29 @@ a:hover {
 
 @media (max-width: 500px) {
     nav {
-        width: 98%;
+        display: unset;
+        width: 98%;        
+        justify-content: space-between;
     }
     .logo {
-        max-width: 50%;
+        display:unset;
+        max-width: 30%;
+        margin-left: 30px;
+        font-size: 25px;
     }
+
+    a.logo.active {
+        margin-right: 150px;
+    }
+
+
     .links {
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         width: 100%;
         max-width: 50vw;
+        font-size: 18px;
     }
     .link {
         padding: 3px;

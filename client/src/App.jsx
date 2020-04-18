@@ -23,7 +23,7 @@ class App extends Component {
   async componentDidMount() {
     const user = await verifyUser()
     if (user) {
-      this.setState({ user })
+      this.setState(user)
     }
   }
 
