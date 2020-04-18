@@ -1,84 +1,85 @@
 @import url('https://fonts.googleapis.com/css?family=Manrope|Open+Sans|Raleway&display=swap');
 
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 
 div.home {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    margin-top: 20%;
-    text-align: center;
-    overflow: none;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 20%;
+  text-align: center;
+  overflow: none;
 }
 
 h1.meet {
-    font-family: 'Raleway', sans-serif;
-    color: white;
-    margin-right: 100px;
-    font-size: 40px;
-    /* font-weight: 100; */
-    letter-spacing: 6px;
-    border-top: 1px solid #9CABA6;
-    padding-top: 15px;
-    overflow: none;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  margin-right: 100px;
+  font-size: 40px;
+  /* font-weight: 100; */
+  letter-spacing: 6px;
+  border-top: 1px solid #9CABA6;
+  padding-top: 15px;
+  overflow: none;
 }
 
 div.aboutHero {
-    margin-top: 20px;
-    font-family: 'Open Sans', sans-serif;
-    color: white;
-    margin-left: 50px;
-    border-bottom: 2px solid #9CABA6;
-    overflow: none;
+  margin-top: 20px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  margin-left: 50px;
+  border-bottom: 2px solid #9CABA6;
+  overflow: none;
 }
 
 .inner {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .aboutHero {
-    line-height: 20px;
-    font-weight: 100;
-    font-size: 2rem;
-    letter-spacing: 2px;
-    /* padding: 20px; */
+  line-height: 20px;
+  font-weight: 100;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  /* padding: 20px; */
 }
 
 body.home {
-    background-color: black;
+  background-color: black;
 }
 
-p.desc, p.about-hero {
-    font-size: 1.5rem;
-    padding: 10px;
+p.desc,
+p.about-hero {
+  font-size: 1.5rem;
+  padding: 10px;
 }
 
 
 
 @media (max-width: 500px) {
-    .home {
-        padding: 100px 40px;
-    }
+  .home {
+    padding: 100px 40px;
+  }
 
-    h1.meet {
-        display: unset;
-        font-size: 25px;
-        letter-spacing: 0;
-    }
+  h1.meet {
+    display: unset;
+    font-size: 25px;
+    letter-spacing: 0;
+  }
 
-    p.about-hero {
-        font-size: 20px;
-    }
+  p.about-hero {
+    font-size: 20px;
+  }
 
-    p.desc {
-        font-size: 16px;
-    }
-    
-    span.inner {
-        font-size: 18px;
-    }
+  p.desc {
+    font-size: 16px;
+  }
+
+  span.inner {
+    font-size: 18px;
+  }
 }

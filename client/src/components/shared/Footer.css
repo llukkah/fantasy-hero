@@ -1,27 +1,27 @@
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* flex: 1; */
-    padding:0;
-    position:absolute;
-    bottom: 0;
-    color: white;
-    text-align: center;
-    width:80%;
-    overflow:none;
-    height:10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex: 1; */
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  width: 80%;
+  overflow: none;
+  height: 10%;
 }
 
 footer a {
-    text-decoration: none;
-    padding:0;
-    text-align: center;
-    width:100%;
-    overflow:none;
-    align-items: center;
+  text-decoration: none;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  overflow: none;
+  align-items: center;
 }
 
 footer a:visited {
-    color: white;
+  color: white;
 }
