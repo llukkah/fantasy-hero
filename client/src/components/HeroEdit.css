@@ -148,7 +148,6 @@ form.edit-form {
     .product-edit {
         width: 100%;
         flex-direction: column;
-        overflow:hidden;
         padding:0;
     }
     .image-container {
