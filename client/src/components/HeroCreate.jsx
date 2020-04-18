@@ -59,7 +59,7 @@ class HeroCreate extends Component {
     return (
       <Layout user={this.props.user}>
         <form className="create-form" onSubmit={this.handleSubmit}>
-          <h1 className="form-title">Create your own hero</h1>
+          <h1 className="create-form-title">Create your own hero</h1>
           <input
             className="create-input-name create-input-focus"
             placeholder='Name'
@@ -96,7 +96,7 @@ class HeroCreate extends Component {
             className="create-textarea-description create-input-focus"
             rows={10}
             maxLength="50"
-            placeholder='Enter a description: Max 50 Characters'
+            placeholder='Description: Max 50 Characters'
             value={hero.description}
             name='description'
             required

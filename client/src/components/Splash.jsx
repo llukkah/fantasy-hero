@@ -14,9 +14,12 @@ class Splash extends Component {
       window.location.assign("/home");
     }
     return (
+      <div>
+      <div className="splashImage"></div>
       <div className="splash">
         <h1 className="splash-text">HERO[ID]</h1>
         <button className="splash-but" onClick={redirect}>ENTER</button>
+        </div> 
       </div>
     );
   }
