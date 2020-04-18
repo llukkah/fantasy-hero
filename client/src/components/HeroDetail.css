@@ -77,3 +77,22 @@ body {
         align-items: center;
     }
 }
+
+@media (max-width: 800px) {
+    .hero-image {
+        width: 300px;
+        margin: 15px;
+        padding: 10px;
+    }
+    .hero-detail {
+        padding: 0px;
+        padding-top: 120px;
+    }
+    .button-container {
+        padding: 20px;
+        padding-bottom: 80px;
+    }
+    .edit-link, .delete-link {
+        width: 40%;
+    }
+}
