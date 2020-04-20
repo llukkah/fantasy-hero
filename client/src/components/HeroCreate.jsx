@@ -104,7 +104,8 @@ class HeroCreate extends Component {
           />
           <input
             className="create-weapon-input create-input-focus"
-            placeholder='Weapon'
+            placeholder='Weapon: Max 10 Characters'
+            maxLength="10"
             value={hero.weapon}
             name='weapon'
             required

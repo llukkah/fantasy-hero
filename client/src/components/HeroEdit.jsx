@@ -100,10 +100,11 @@ class HeroEdit extends Component {
               <option value='goblin'>Goblin</option>
               <option value='troll'>Troll</option>
             </select>
-            <label className="label" >Weapon:</label>
+            <label className="label" >Weapon: Max 10 Characters</label>
             <input
               className="input-price"
               placeholder='Weapon'
+              maxLength="10"
               id="weapon"
               value={hero.weapon} // come back to this
               name='weapon'
