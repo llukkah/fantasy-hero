@@ -12,7 +12,7 @@ div.home {
   align-items: center;
   margin-top: 20%;
   text-align: center;
-  overflow: none;
+  overflow: hidden;
 }
 
 h1.meet {
@@ -24,7 +24,7 @@ h1.meet {
   letter-spacing: 6px;
   border-top: 1px solid #9CABA6;
   padding-top: 15px;
-  overflow: none;
+  overflow: hidden;
 }
 
 div.aboutHero {
@@ -33,7 +33,7 @@ div.aboutHero {
   color: white;
   margin-left: 50px;
   border-bottom: 2px solid #9CABA6;
-  overflow: none;
+  overflow: hidden;
 }
 
 .inner {

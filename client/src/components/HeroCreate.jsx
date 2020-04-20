@@ -73,8 +73,8 @@ class HeroCreate extends Component {
             <option>Select Class</option>
             <option value={this.state.list[0]}>Mage</option>
             <option value={this.state.list[1]}>Hunter</option>
-            <option value={this.state.list[2]}>Healer</option>
-            <option value={this.state.list[3]}>Warrior</option>
+            <option value={this.state.list[2]}>Warrior</option>
+            <option value={this.state.list[3]}>Healer</option>
             <option value={this.state.list[4]}>Rogue</option>
           </select>
 

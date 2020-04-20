@@ -127,7 +127,12 @@ button {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
+  /* overflow: hidden; */
   height: Calc(100vh - 4em);
+}
+
+.layout::-webkit-scrollbar {
+  display: none;
 }
 
 .layout .content {
