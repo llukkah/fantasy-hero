@@ -4,6 +4,7 @@ export const signUp = async credentials => {
     try {
         const resp = await api.post('/sign-up', credentials)
         localStorage.setItem('token', resp.data.token)
+        console.log(`this is the response data: ${Object.keys(resp.data.user)}`)
         return resp.data
     } catch (error) {
         throw error
@@ -42,6 +43,7 @@ export const verifyUser = async () => {
     const token = localStorage.getItem('token')
     if (token) {
         const res = await api.get('/verify')
+        console.log(`this is token && resp data:${token}, ${Object.keys(res.data.user)}`)
         return res.data
     }
     return false

@@ -27,7 +27,9 @@ class App extends Component {
     }
   }
 
-  setUser = user => this.setState({ user })
+  setUser = user => {console.log(`calling setUser: ${Object.keys(user)}, ${user._id}`)
+    this.setState({ user })}
+  
 
   clearUser = () => this.setState({ user: null })
 

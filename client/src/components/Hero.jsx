@@ -3,6 +3,8 @@ import './Hero.css';
 import { Link } from 'react-router-dom'
 
 const Hero = (props) => {
+    console.log(`this is hero props: ${props}`);
+
     return (
         <>
         <Link className="product" to={{pathname: `/heroes/${props._id}`,

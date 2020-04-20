@@ -59,11 +59,17 @@ const signIn = async (req, res) => {
     }
 }
 
-const verifyUser = (req, res) => {
+const verifyUser =  async (req, res) => {
     try {
         const token = req.headers.authorization.split(" ")[1]
-        const user = jwt.verify(token, TOKEN_KEY)
-        res.json({ user })
+        const verifiedUser = jwt.verify(token, TOKEN_KEY)
+        // console.log(`token and verifieduser: ${token}, ${verifiedUser.username}`)
+        if(verifiedUser) {
+            console.log(`hellllloooooo`)
+            const user = await User.findOne({ username: verifiedUser.username })
+            console.log(`user HERE: ${user}`)
+            res.json({ user })
+        }
     } catch (e) {
         res.status(401).send('Not Authorized')
     }
@@ -108,8 +114,6 @@ const displayAHero = async (req, res) => {
         for(let i = 0; i < hero.length; i++) {
             display = hero[Math.floor(Math.random() * hero.length)]
         }
-        // console.log(display)
-        // console.log(hero.length);
         if (display) {
             return res.json({display})
         }

@@ -27,6 +27,7 @@ class HeroDetail extends Component {
 
   render() {
     const { hero } = this.state
+    console.log(`this is hero user${Object.keys(this.props.user)}`)
     return (
       hero ?
         <Layout user={this.props.user}>
